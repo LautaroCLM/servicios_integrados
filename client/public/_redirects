@@ -1,0 +1,30 @@
+# API Proxy para Netlify Functions
+/api/contact                  /.netlify/functions/contact   200!
+/api/ai-chat                  /.netlify/functions/ai-chat   200!
+/api/admin-novedades          /.netlify/functions/admin-novedades 200!
+/api/admin-novedades/*        /.netlify/functions/admin-novedades 200!
+
+# Redirección canónica 301 para evitar contenido duplicado
+/politica-de-privacidad    /privacidad    301!
+
+# Rutas SPA válidas para servir index.html con HTTP 200
+/privacidad                /index.html    200
+/mantenimiento-industrial  /index.html    200
+/ingenieria-de-mantenimiento /index.html  200
+/confiabilidad-industrial  /index.html    200
+/torneria-mecanizado       /index.html    200
+/fabricacion-acero-inoxidable /index.html 200
+/refrigeracion-industrial  /index.html    200
+/mantenimiento-hornos-industriales /index.html 200
+/blog                      /index.html    200
+/blog/mantenimiento-preventivo-industrial /index.html 200
+/blog/mantenimiento-predictivo-industrial /index.html 200
+/blog/mantenimiento-correctivo-vs-preventivo /index.html 200
+/blog/paradas-de-planta-industriales /index.html 200
+/blog/overhaul-industrial  /index.html    200
+/blog/analisis-causa-raiz-mantenimiento /index.html 200
+/blog/confiabilidad-industrial-mantenimiento-autonomo /index.html 200
+/panel-novedades-gestion-si /index.html   200
+
+# SPA Fallback
+/*                         /index.html    200

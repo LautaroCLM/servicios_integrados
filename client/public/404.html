@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10181d" />
+  <title>404 - Página no encontrada | Servicios Integrados</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #10181d;
+      color: #fff7ee;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(16, 24, 29, 0.85);
+      backdrop-filter: blur(12px);
+      padding: 1rem 1.5rem;
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff7ee;
+    }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px;
+      object-fit: contain;
+    }
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.05em;
+    }
+    .brand-sub {
+      font-size: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      background: rgba(109, 40, 217, 0.2);
+      padding: 0.35rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #a78bfa;
+    }
+    .error-code {
+      font-size: clamp(5rem, 15vw, 9rem);
+      font-weight: 800;
+      line-height: 1;
+      margin: 1.5rem 0 0.5rem;
+      color: rgba(255, 255, 255, 0.95);
+    }
+    .error-code span {
+      color: #a78bfa;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    p.desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255, 247, 238, 0.75);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background-color: #6d28d9;
+      color: #ffffff;
+      border: 1px solid #6d28d9;
+    }
+    .btn-primary:hover {
+      background-color: #5b21b6;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #fff7ee;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-outline:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #a78bfa;
+    }
+    .links-grid {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .link-card {
+      padding: 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+    .link-card:hover {
+      border-color: rgba(167, 139, 250, 0.5);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .link-card h2 {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+    .link-card p {
+      font-size: 0.75rem;
+      color: rgba(255, 247, 238, 0.6);
+    }
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      font-size: 0.75rem;
+      color: rgba(255, 247, 238, 0.5);
+      text-align: center;
+    }
+    footer a {
+      color: #a78bfa;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="brand" aria-label="Servicios Integrados — Inicio">
+        <img src="/images/logoapp.png" alt="Servicios Integrados" class="brand-logo" />
+        <div>
+          <div class="font-display brand-name">Servicios <span style="color:#a78bfa;">Integrados</span></div>
+          <div class="brand-sub">Mantenimiento · Ingeniería · Confiabilidad</div>
+        </div>
+      </a>
+      <a href="/#contacto" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.75rem;">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="badge font-display">Error 404 · Página No Encontrada</div>
+    <div class="font-display error-code">4<span>0</span>4</div>
+    <h1 class="font-display">La página solicitada no está disponible</h1>
+    <p class="desc">
+      La dirección web a la que intenta acceder no existe, ha sido movida o no está disponible. Puede regresar a la portada o explorar las áreas de especialización técnica de nuestra planta.
+    </p>
+
+    <div class="actions font-display">
+      <a href="/" class="btn btn-primary">Volver al Inicio</a>
+      <a href="https://wa.me/5491140705211?text=Hola%20Servicios%20Integrados,%20estoy%20navegando%20el%20sitio%20web%20y%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp Directo</a>
+    </div>
+
+    <div class="links-grid">
+      <a href="/#nosotros" class="link-card">
+        <h2 class="font-display">¿Quiénes Somos?</h2>
+        <p>Trayectoria y presencia técnica en planta</p>
+      </a>
+      <a href="/#servicios" class="link-card">
+        <h2 class="font-display">Servicios Industriales</h2>
+        <p>Mantenimiento, tornería e ingeniería</p>
+      </a>
+      <a href="/#especialidad" class="link-card">
+        <h2 class="font-display">Especialidad en Planta</h2>
+        <p>Chocolates, obleas y líneas continuas</p>
+      </a>
+      <a href="/#metodo-faro" class="link-card">
+        <h2 class="font-display">Método Líder FARO®</h2>
+        <p>Filosofía y formación operativa</p>
+      </a>
+      <a href="/#metodologia" class="link-card">
+        <h2 class="font-display">Metodología</h2>
+        <p>Herramientas técnicas y confiabilidad</p>
+      </a>
+      <a href="/#contacto" class="link-card">
+        <h2 class="font-display">Contacto Técnico</h2>
+        <p>Solicite una visita o presupuesto</p>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width: 1400px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+      <p>© 2026 <strong>Servicios Integrados</strong> — Mantenimiento, Ingeniería y Confiabilidad Industrial.</p>
+      <p>
+        <a href="tel:+5491150705211">Tel: +54 9 11 5070-5211</a> • 
+        <a href="mailto:serviciosintegrados68@gmail.com">serviciosintegrados68@gmail.com</a> • 
+        <a href="/privacidad">Política de Privacidad</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
