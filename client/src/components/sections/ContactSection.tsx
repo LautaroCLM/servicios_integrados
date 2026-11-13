@@ -171,15 +171,6 @@ export function ContactSection() {
                   antonioa@serviciosintegradosweb.com
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail size={16} />
-                <a
-                  href="mailto:antonionandrada@gmail.com"
-                  className="inline-flex min-h-11 items-center underline hover:text-[#10181d]"
-                >
-                  antonionandrada@gmail.com
-                </a>
-              </div>
             </div>
           </Reveal>
 

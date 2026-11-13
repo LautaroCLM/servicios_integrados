@@ -56,7 +56,7 @@ INFORMACIÓN CORPORATIVA Y CAPACIDADES TÉCNICAS:
 4. CANALES DE CONTACTO Y PRESUPUESTOS:
    - WhatsApp Directo: 11 4070-5211 (+54 9 11 4070 5211)
    - Teléfono de Atención: +54 9 11 5070-5211 (+54 9 11 5070-5211)
-   - Correos Electrónicos: antonioa@serviciosintegradosweb.com / serviciosintegrados68@gmail.com
+   - Correos Electrónicos: antonioa@serviciosintegradosweb.com
    - Formulario Web: Sección "Contacto" en el sitio web (para solicitar visitas técnicas y cotizaciones).
    - Visitas Técnicas: Se coordinan visitas y diagnósticos especializados directamente en planta sin compromiso.
 

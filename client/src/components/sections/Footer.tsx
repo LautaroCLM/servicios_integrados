@@ -40,8 +40,8 @@ export function Footer() {
               WhatsApp: 11 4070-5211
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
-            <a href="mailto:serviciosintegrados68@gmail.com" className="inline-flex min-h-11 items-center hover:text-white transition-colors">
-              serviciosintegrados68@gmail.com
+            <a href="mailto:antonioa@serviciosintegradosweb.com" className="inline-flex min-h-11 items-center hover:text-white transition-colors">
+              antonioa@serviciosintegradosweb.com
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
             <a href="/blog/" className="inline-flex min-h-11 items-center text-[#a78bfa] hover:text-white underline transition-colors">

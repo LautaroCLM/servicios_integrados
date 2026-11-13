@@ -205,8 +205,8 @@ export default function NotFound() {
               WhatsApp: 11 4070-5211
             </a>
             <span>•</span>
-            <a href="mailto:serviciosintegrados68@gmail.com" className="hover:text-white transition-colors">
-              serviciosintegrados68@gmail.com
+            <a href="mailto:antonioa@serviciosintegradosweb.com" className="hover:text-white transition-colors">
+              antonioa@serviciosintegradosweb.com
             </a>
             <span>•</span>
             <a href="/privacidad/" className="text-[#a78bfa] underline hover:text-white transition-colors">

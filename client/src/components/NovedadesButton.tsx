@@ -291,7 +291,7 @@ export function NovedadesButton() {
 
                 {/* 4. GMAIL */}
                 <a
-                  href="mailto:serviciosintegrados68@gmail.com"
+                  href="mailto:antonioa@serviciosintegradosweb.com"
                   onClick={() => setIsMenuOpen(false)}
                   className="group flex w-full items-center gap-3.5 rounded-xl p-3 text-left transition-all duration-200 hover:bg-neutral-50 active:scale-[0.98]"
                 >
