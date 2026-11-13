@@ -426,7 +426,7 @@ export function ContactSection() {
                     )}
                   </button>
 
-                  <p className="mt-4 text-center text-[11px] leading-relaxed text-[#fff7ee]/60">
+                  <p className="mt-4 text-center text-[12px] leading-relaxed text-[#fff7ee]/60">
                     Al enviar este formulario, usted acepta nuestra{" "}
                     <a
                       href="/privacidad/"

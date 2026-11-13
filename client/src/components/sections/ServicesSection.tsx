@@ -221,7 +221,7 @@ function ServiceCard({ service, onImageClick }: ServiceCardProps) {
           </div>
 
           {/* Persistent subtle indicator badge in top right */}
-          <div className="absolute top-2.5 right-2.5 rounded-full bg-[#10181d]/60 px-2 py-1 text-[11px] font-medium text-white backdrop-blur-md transition-opacity duration-300 group-hover/img:opacity-0">
+          <div className="absolute top-2.5 right-2.5 rounded-full bg-[#10181d]/60 px-2 py-1 text-[12px] font-medium text-white backdrop-blur-md transition-opacity duration-300 group-hover/img:opacity-0">
             <span className="flex items-center gap-1">
               <ZoomIn size={12} />
               <span>Zoom</span>
@@ -511,7 +511,7 @@ function ImageZoomModal({
             <p className="text-xs text-white/80 font-medium truncate max-w-xl">
               {currentService.subtitle}
             </p>
-            <div className="flex items-center gap-3 text-[11px] text-white/50">
+            <div className="flex items-center gap-3 text-[12px] text-white/50">
               <span className="hidden md:inline">
                 Doble clic: alternar zoom • Rueda: acercar/alejar • Arrastrar para explorar
               </span>

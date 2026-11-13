@@ -197,12 +197,12 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
                     <h3 id="ai-chat-title" className="font-display text-xs sm:text-sm font-bold text-white truncate">
                       Asistente de Servicios Integrados
                     </h3>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-1.5 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 shrink-0">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-1.5 py-0.5 text-[11px] font-bold text-emerald-300 border border-emerald-500/30 shrink-0">
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                       Online
                     </span>
                   </div>
-                  <p className="text-[10px] sm:text-[11px] font-medium text-[#fff7ee]/60 truncate">
+                  <p className="text-[11px] sm:text-[12px] font-medium text-[#fff7ee]/60 truncate">
                     ¿En qué podemos ayudarte?
                   </p>
                 </div>
@@ -322,7 +322,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
             </div>
 
             {/* Quick Direct Actions Footer Bar */}
-            <div className="shrink-0 bg-[#121c21] border-t border-white/10 px-3 py-2 flex items-center justify-between gap-2 text-[11px]">
+            <div className="shrink-0 bg-[#121c21] border-t border-white/10 px-3 py-2 flex items-center justify-between gap-2 text-[12px]">
               <a
                 href="https://wa.me/5491140705211?text=Hola%20Servicios%20Integrados,%20quisiera%20consultar%20por%20servicios%20técnicos."
                 target="_blank"
@@ -371,7 +371,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
                   <Send size={16} />
                 </button>
               </form>
-              <p className="mt-1.5 text-center text-[10px] text-white/40">
+              <p className="mt-1.5 text-center text-[11px] text-white/40">
                 Servicios Integrados · Respuestas inmediatas y asistencia técnica
               </p>
             </div>

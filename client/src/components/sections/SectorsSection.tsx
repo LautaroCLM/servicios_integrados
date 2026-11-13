@@ -217,7 +217,7 @@ function SectorCarouselCard({
               key={idx}
               type="button"
               onClick={() => setCurrentIndex(idx)}
-              className={`relative rounded-full px-2 py-0.5 text-[11px] font-bold transition-all duration-300 cursor-pointer before:absolute before:-inset-x-0.5 before:-inset-y-3 before:content-[''] ${
+              className={`relative rounded-full px-2 py-0.5 text-[12px] font-bold transition-all duration-300 cursor-pointer before:absolute before:-inset-x-0.5 before:-inset-y-3 before:content-[''] ${
                 idx === currentIndex
                   ? "bg-[#6d28d9] text-white shadow-md"
                   : "text-[#fff7ee]/70 hover:text-white hover:bg-white/10"
@@ -239,7 +239,7 @@ function SectorCarouselCard({
                   : "opacity-0 translate-y-4 absolute inset-0 pointer-events-none"
               }`}
             >
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-[#a78bfa] backdrop-blur-md">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-2.5 py-0.5 text-[12px] font-bold uppercase tracking-wider text-[#a78bfa] backdrop-blur-md">
                 Sector 0{index + 1} / 0{slides.length}
               </div>
               <h4 className="font-display mt-2 text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight drop-shadow-md">

@@ -207,7 +207,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Asistente IA
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Consultá sobre nuestros servicios
                     </p>
                   </div>
@@ -231,11 +231,11 @@ export function NovedadesButton() {
                       <span className="font-display text-sm font-extrabold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                         Novedades
                       </span>
-                      <span className="rounded-full bg-[#6d28d9] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">
+                      <span className="rounded-full bg-[#6d28d9] px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
                         Nuevo
                       </span>
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Últimas actualizaciones y proyectos
                     </p>
                   </div>
@@ -258,7 +258,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Preguntas frecuentes
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Respuestas sobre nuestros servicios
                     </p>
                   </div>
@@ -283,7 +283,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       WhatsApp
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Escríbenos por WhatsApp
                     </p>
                   </div>
@@ -302,7 +302,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Gmail
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Envíanos un correo
                     </p>
                   </div>
@@ -321,7 +321,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Llámanos
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       +54 9 11 5070-5211
                     </p>
                   </div>
@@ -340,7 +340,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Agendar reunión
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Coordinemos una reunión
                     </p>
                   </div>
@@ -430,7 +430,7 @@ export function NovedadesButton() {
                 {/* Top Row: Tag + Close Button */}
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a78bfa]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-3 py-1 text-[12px] font-bold uppercase tracking-widest text-[#a78bfa]">
                       <Sparkles size={12} /> Centro de Novedades
                     </span>
                     <span className="text-xs font-medium text-[#fff7ee]/60">
@@ -504,11 +504,11 @@ export function NovedadesButton() {
                             />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#10181d] via-transparent to-transparent opacity-75" />
                           <div className="absolute top-3 left-3 flex items-center gap-2">
-                            <span className="rounded-md border border-[#a78bfa]/40 bg-[#6d28d9]/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
+                            <span className="rounded-md border border-[#a78bfa]/40 bg-[#6d28d9]/90 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
                               {item.category}
                             </span>
                           </div>
-                          <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-[11px] font-semibold text-[#fff7ee]/90">
+                          <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-[12px] font-semibold text-[#fff7ee]/90">
                             <Calendar size={13} className="text-[#a78bfa]" />
                             {item.date}
                           </div>

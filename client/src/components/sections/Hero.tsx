@@ -34,25 +34,11 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-[820px] max-w-[1600px] flex-col justify-end px-5 pb-14 pt-32 md:min-h-screen md:px-10 md:pb-20">
-        <div className="grid max-w-[1100px] grid-cols-1 gap-7 lg:grid-cols-[112px_1fr] lg:gap-10">
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-            className="eyebrow flex items-center gap-3 text-[#fff7ee]/70"
-          >
-            <span className="h-px w-9 bg-[#6d28d9]" />
-            01 / 04
-          </motion.div>
+        <div className="grid max-w-[1100px] grid-cols-1">
           <div>
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.34, duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-              className="orange-dot eyebrow mb-6 text-[#fff7ee]/90"
-            >
-              Soluciones para la Industria · Más de 30 años de trayectoria
-            </motion.p>
+            {/* Una sola etiqueta antes del título (la marca, dentro del H1). Se quitaron el
+                contador "01 / 04" (no había carrusel) y la línea "Soluciones para la industria…",
+                cuyo dato de "más de 30 años" pasó al párrafo de abajo. */}
             {/* Sin animación de entrada: el H1 es el contenido principal (LCP) y debe verse
                 desde el HTML prerenderizado, sin esperar al JavaScript. Incluye la marca. */}
             <h1 className="headline max-w-[980px] text-[clamp(2.1rem,7vw,7.2rem)]">
@@ -67,7 +53,7 @@ export function Hero() {
               className="mt-8 flex flex-col gap-7 sm:flex-row sm:items-end sm:justify-between"
             >
               <p className="max-w-[540px] text-[1rem] leading-7 text-[#fff7ee]/80">
-                Diseñamos, fabricamos, mantenemos y optimizamos equipos industriales para que su producción nunca se detenga. Especialistas en el sector alimenticio.
+                Diseñamos, fabricamos, mantenemos y optimizamos equipos industriales para que su producción nunca se detenga. Más de 30 años de trayectoria, especialistas en el sector alimenticio.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
                 <a href="#contacto" className="safety-button justify-center sm:w-auto">

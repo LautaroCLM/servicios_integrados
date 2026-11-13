@@ -175,7 +175,7 @@ export function MethodologySection() {
                 </div>
 
                 {/* Subtle indicator bottom */}
-                <div className="mt-6 flex items-center gap-2 pt-2 text-[0.7rem] font-bold uppercase tracking-wider text-[#fff7ee]/40 group-hover:text-[#a78bfa]">
+                <div className="mt-6 flex items-center gap-2 pt-2 text-[0.75rem] font-bold uppercase tracking-wider text-[#fff7ee]/40 group-hover:text-[#a78bfa]">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#a78bfa]" />
                   <span>Estándar Operativo</span>
                 </div>

@@ -251,7 +251,7 @@ export default function BlogIndex() {
 
                       <Link
                         href={article.targetServiceUrl}
-                        className="text-[11px] text-[#fff7ee]/60 hover:text-[#a78bfa] underline transition-colors"
+                        className="text-[12px] text-[#fff7ee]/60 hover:text-[#a78bfa] underline transition-colors"
                       >
                         {article.targetServiceName}
                       </Link>
