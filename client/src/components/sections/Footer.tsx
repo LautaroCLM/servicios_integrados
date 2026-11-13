@@ -21,7 +21,7 @@ export function Footer() {
               <a
                 key={href}
                 href={href}
-                className="nav-link font-display text-xs font-bold uppercase tracking-[.09em] text-[#fff7ee]/75"
+                className="nav-link inline-flex min-h-11 items-center font-display text-xs font-bold uppercase tracking-[.09em] text-[#fff7ee]/75"
               >
                 {name}
               </a>
@@ -32,23 +32,23 @@ export function Footer() {
         <div className="flex flex-col justify-between items-start md:items-center gap-4 text-[.75rem] font-medium text-[#fff7ee]/60 md:flex-row">
           <p>© {new Date().getFullYear()} <strong>Servicios Integrados</strong> — Mantenimiento, Ingeniería y Confiabilidad Industrial.</p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
-            <a href="tel:+5491150705211" className="hover:text-white transition-colors">
+            <a href="tel:+5491150705211" className="inline-flex min-h-11 items-center hover:text-white transition-colors">
               Tel: +54 9 11 5070-5211
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
-            <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center hover:text-white transition-colors">
               WhatsApp: 11 4070-5211
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
-            <a href="mailto:serviciosintegrados68@gmail.com" className="hover:text-white transition-colors">
+            <a href="mailto:serviciosintegrados68@gmail.com" className="inline-flex min-h-11 items-center hover:text-white transition-colors">
               serviciosintegrados68@gmail.com
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
-            <a href="/blog/" className="text-[#a78bfa] hover:text-white underline transition-colors">
+            <a href="/blog/" className="inline-flex min-h-11 items-center text-[#a78bfa] hover:text-white underline transition-colors">
               Blog Técnico
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
-            <a href="/privacidad/" className="text-[#a78bfa] hover:text-white underline transition-colors">
+            <a href="/privacidad/" className="inline-flex min-h-11 items-center text-[#a78bfa] hover:text-white underline transition-colors">
               Política de Privacidad
             </a>
           </div>

@@ -166,7 +166,7 @@ export function ContactSection() {
                 <Mail size={16} />
                 <a
                   href="mailto:antonioa@serviciosintegradosweb.com"
-                  className="underline hover:text-[#10181d]"
+                  className="inline-flex min-h-11 items-center underline hover:text-[#10181d]"
                 >
                   antonioa@serviciosintegradosweb.com
                 </a>
@@ -175,7 +175,7 @@ export function ContactSection() {
                 <Mail size={16} />
                 <a
                   href="mailto:antonionandrada@gmail.com"
-                  className="underline hover:text-[#10181d]"
+                  className="inline-flex min-h-11 items-center underline hover:text-[#10181d]"
                 >
                   antonionandrada@gmail.com
                 </a>

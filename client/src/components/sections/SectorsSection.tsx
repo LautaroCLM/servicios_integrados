@@ -197,7 +197,7 @@ function SectorCarouselCard({
           type="button"
           onClick={prevSlide}
           aria-label="Anterior slide"
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-30 grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-full border border-white/20 bg-[#10181d]/60 text-white backdrop-blur-md transition-all duration-300 hover:bg-[#6d28d9] hover:border-[#6d28d9] hover:scale-110 active:scale-95 cursor-pointer opacity-80 group-hover:opacity-100"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-[#10181d]/60 text-white backdrop-blur-md transition-all duration-300 hover:bg-[#6d28d9] hover:border-[#6d28d9] hover:scale-110 active:scale-95 cursor-pointer opacity-80 group-hover:opacity-100"
         >
           <ChevronLeft size={20} />
         </button>
@@ -205,7 +205,7 @@ function SectorCarouselCard({
           type="button"
           onClick={nextSlide}
           aria-label="Siguiente slide"
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-30 grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-full border border-white/20 bg-[#10181d]/60 text-white backdrop-blur-md transition-all duration-300 hover:bg-[#6d28d9] hover:border-[#6d28d9] hover:scale-110 active:scale-95 cursor-pointer opacity-80 group-hover:opacity-100"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-30 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-[#10181d]/60 text-white backdrop-blur-md transition-all duration-300 hover:bg-[#6d28d9] hover:border-[#6d28d9] hover:scale-110 active:scale-95 cursor-pointer opacity-80 group-hover:opacity-100"
         >
           <ChevronRight size={20} />
         </button>
@@ -217,7 +217,7 @@ function SectorCarouselCard({
               key={idx}
               type="button"
               onClick={() => setCurrentIndex(idx)}
-              className={`rounded-full px-2 py-0.5 text-[11px] font-bold transition-all duration-300 cursor-pointer ${
+              className={`relative rounded-full px-2 py-0.5 text-[11px] font-bold transition-all duration-300 cursor-pointer before:absolute before:-inset-x-0.5 before:-inset-y-3 before:content-[''] ${
                 idx === currentIndex
                   ? "bg-[#6d28d9] text-white shadow-md"
                   : "text-[#fff7ee]/70 hover:text-white hover:bg-white/10"
@@ -301,7 +301,7 @@ export function SectorsSection() {
             <div className="mt-6 pt-4 border-t border-[#10181d]/10">
               <Link
                 href="/mantenimiento-industrial/"
-                className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
+                className="inline-flex min-h-11 items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
               >
                 <span>Ver Mantenimiento Industrial</span>
                 <ArrowRight size={13} />
@@ -334,7 +334,7 @@ export function SectorsSection() {
             <div className="mt-6 pt-4 border-t border-[#10181d]/10">
               <Link
                 href="/mantenimiento-hornos-industriales/"
-                className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
+                className="inline-flex min-h-11 items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
               >
                 <span>Ver servicio de Hornos y Placas Wafer</span>
                 <ArrowRight size={13} />

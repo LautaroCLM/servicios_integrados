@@ -186,7 +186,7 @@ function ServiceCard({ service, onImageClick }: ServiceCardProps) {
             <div className="pt-1">
               <Link
                 href={service.link}
-                className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
+                className="inline-flex min-h-11 items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
               >
                 <span>{service.linkText || "Ver servicio"}</span>
                 <ArrowRight size={13} />
