@@ -178,8 +178,8 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.96 }}
             transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-            style={{ transformOrigin: "bottom right" }}
-            className="fixed z-[60] inset-x-3 bottom-3 sm:inset-x-auto sm:right-6 sm:bottom-24 w-auto sm:w-[410px] md:w-[430px] h-[calc(100dvh-1.5rem)] max-h-[580px] sm:h-[min(540px,calc(100dvh-7.5rem))] sm:max-h-[calc(100dvh-7.5rem)] flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-white/15 bg-[#10181d] text-[#fff7ee] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.08)] select-text"
+            style={{ transformOrigin: "bottom left" }}
+            className="fixed z-[60] inset-x-3 bottom-3 sm:inset-x-auto sm:left-6 sm:bottom-24 w-auto sm:w-[410px] md:w-[430px] h-[calc(100dvh-1.5rem)] max-h-[580px] sm:h-[min(540px,calc(100dvh-7.5rem))] sm:max-h-[calc(100dvh-7.5rem)] flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-white/15 bg-[#10181d] text-[#fff7ee] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.08)] select-text"
             role="dialog"
             aria-labelledby="ai-chat-title"
           >

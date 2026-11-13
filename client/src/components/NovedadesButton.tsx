@@ -168,13 +168,14 @@ export function NovedadesButton() {
         onNavigateToContact={handleContactClickFromChat}
       />
 
-      {/* Floating Speed-Dial & AI Menu Anchor (Fixed Bottom-Right) */}
+      {/* Floating Speed-Dial & AI Menu Anchor (Fixed Bottom-Left).
+          Va a la izquierda para no chocar con el cartel "Powered by Netlify" (esquina inferior
+          derecha). En celular se sube un poco más porque ese cartel ocupa buena parte del ancho. */}
       <div
         ref={menuContainerRef}
-        className="fixed z-40 flex flex-col items-end gap-2.5"
+        className="fixed z-40 flex flex-col items-start gap-2.5 bottom-[calc(5.5rem_+_env(safe-area-inset-bottom,0px))] sm:bottom-[calc(1.5rem_+_env(safe-area-inset-bottom,0px))]"
         style={{
-          bottom: "calc(1.5rem + env(safe-area-inset-bottom, 0px))",
-          right: "calc(1.5rem + env(safe-area-inset-right, 0px))",
+          left: "calc(1.5rem + env(safe-area-inset-left, 0px))",
         }}
       >
         {/* 2. Desplegable emergente de Contacto y Novedades hacia arriba */}
@@ -187,7 +188,7 @@ export function NovedadesButton() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 12, scale: 0.95 }}
               transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
-              style={{ transformOrigin: "bottom right" }}
+              style={{ transformOrigin: "bottom left" }}
               className="mb-1 w-[290px] sm:w-[320px] overflow-hidden rounded-2xl border border-black/10 bg-white p-2 text-[#10181d] shadow-[0_20px_50px_rgba(0,0,0,0.25)] ring-1 ring-black/5"
             >
               <div className="flex flex-col divide-y divide-neutral-100">
