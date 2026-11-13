@@ -109,7 +109,7 @@ export function FaroSection() {
               </ul>
               <div className="mt-4 pt-3 border-t border-white/10">
                 <Link
-                  href="/confiabilidad-industrial"
+                  href="/confiabilidad-industrial/"
                   className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#a78bfa] hover:underline transition-colors"
                 >
                   <span>Conocer más sobre Confiabilidad Industrial</span>

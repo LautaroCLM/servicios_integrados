@@ -33,15 +33,32 @@
   status = 200
   force = true
 
-# Redirección canónica 301
+# Redirección canónica 301 directa a /privacidad/
 [[redirects]]
   from = "/politica-de-privacidad"
-  to = "/privacidad"
+  to = "/privacidad/"
   status = 301
   force = true
 
-# SPA fallback para rutas de la aplicación
 [[redirects]]
-  from = "/*"
+  from = "/politica-de-privacidad/*"
+  to = "/privacidad/"
+  status = 301
+  force = true
+
+# Panel admin SPA
+[[redirects]]
+  from = "/panel-novedades-gestion-si"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/panel-novedades-gestion-si/*"
+  to = "/index.html"
+  status = 200
+
+# 404 personalizado para rutas inexistentes
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

@@ -37,18 +37,18 @@ export function Footer() {
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
             <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-              WhatsApp: 11-40705211
+              WhatsApp: 11 4070-5211
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
             <a href="mailto:serviciosintegrados68@gmail.com" className="hover:text-white transition-colors">
               serviciosintegrados68@gmail.com
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
-            <a href="/blog" className="text-[#a78bfa] hover:text-white underline transition-colors">
+            <a href="/blog/" className="text-[#a78bfa] hover:text-white underline transition-colors">
               Blog Técnico
             </a>
             <span className="hidden sm:inline text-white/30">•</span>
-            <a href="/privacidad" className="text-[#a78bfa] hover:text-white underline transition-colors">
+            <a href="/privacidad/" className="text-[#a78bfa] hover:text-white underline transition-colors">
               Política de Privacidad
             </a>
           </div>

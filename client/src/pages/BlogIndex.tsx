@@ -36,73 +36,73 @@ interface ArticleSummary {
 
 const ARTICLES_LIST: ArticleSummary[] = [
   {
-    slug: "/blog/mantenimiento-preventivo-industrial",
+    slug: "/blog/mantenimiento-preventivo-industrial/",
     title: "Mantenimiento Preventivo Industrial: Qué es, Ventajas y Cuándo Aplicarlo",
     category: "Mantenimiento",
     readTime: "5 min",
     description: "Guía técnica sobre la planificación de rutinas preventivas en plantas continuas para evitar fallas imprevistas y extender la vida útil de los activos.",
     icon: Wrench,
-    targetServiceUrl: "/mantenimiento-industrial",
+    targetServiceUrl: "/mantenimiento-industrial/",
     targetServiceName: "Mantenimiento Industrial",
   },
   {
-    slug: "/blog/mantenimiento-predictivo-industrial",
+    slug: "/blog/mantenimiento-predictivo-industrial/",
     title: "Mantenimiento Predictivo Industrial: Técnicas y Monitoreo de Condición",
     category: "Ingeniería",
     readTime: "6 min",
     description: "Cómo implementar monitoreo de condición, análisis de vibraciones y termografía para anticipar desvíos antes de que ocurran paradas no programadas.",
     icon: Activity,
-    targetServiceUrl: "/ingenieria-de-mantenimiento",
+    targetServiceUrl: "/ingenieria-de-mantenimiento/",
     targetServiceName: "Ingeniería de Mantenimiento",
   },
   {
-    slug: "/blog/mantenimiento-correctivo-vs-preventivo",
+    slug: "/blog/mantenimiento-correctivo-vs-preventivo/",
     title: "Mantenimiento Correctivo vs. Preventivo: Diferencias y Cuándo Aplicar Cada Uno",
     category: "Estrategia",
     readTime: "5 min",
     description: "Análisis comparativo entre el mantenimiento reactivo y preventivo: impacto económico, disponibilidad operativa y equilibrio estratégico en planta.",
     icon: Layers,
-    targetServiceUrl: "/mantenimiento-industrial",
+    targetServiceUrl: "/mantenimiento-industrial/",
     targetServiceName: "Mantenimiento Industrial",
   },
   {
-    slug: "/blog/paradas-de-planta-industriales",
+    slug: "/blog/paradas-de-planta-industriales/",
     title: "Paradas de Planta Industriales: Planificación, Ejecución y Control",
     category: "Operaciones",
     readTime: "7 min",
     description: "Metodología para gestionar paradas técnicas mayores: coordinación de cuadrillas, tareas en ruta crítica, seguridad y control de puesta en marcha.",
     icon: Clock,
-    targetServiceUrl: "/mantenimiento-industrial",
+    targetServiceUrl: "/mantenimiento-industrial/",
     targetServiceName: "Mantenimiento Industrial",
   },
   {
-    slug: "/blog/overhaul-industrial",
+    slug: "/blog/overhaul-industrial/",
     title: "Overhaul Industrial: Reacondicionamiento Integral de Maquinaria",
     category: "Mantenimiento Mayor",
     readTime: "6 min",
     description: "Qué implica un overhaul técnico mayor en equipos de proceso continuo, cuándo justificarlo y cómo recupera las tolerancias originales de fábrica.",
     icon: RotateCcw,
-    targetServiceUrl: "/mantenimiento-industrial",
+    targetServiceUrl: "/mantenimiento-industrial/",
     targetServiceName: "Mantenimiento Industrial",
   },
   {
-    slug: "/blog/analisis-causa-raiz-mantenimiento",
+    slug: "/blog/analisis-causa-raiz-mantenimiento/",
     title: "Análisis de Causa Raíz (RCA) Aplicado al Mantenimiento Industrial",
     category: "Ingeniería",
     readTime: "6 min",
     description: "Aplicación práctica del método de análisis de causa raíz para investigar averías crónicas y diseñar soluciones mecánicas definitivas.",
     icon: Cpu,
-    targetServiceUrl: "/ingenieria-de-mantenimiento",
+    targetServiceUrl: "/ingenieria-de-mantenimiento/",
     targetServiceName: "Ingeniería de Mantenimiento",
   },
   {
-    slug: "/blog/confiabilidad-industrial-mantenimiento-autonomo",
+    slug: "/blog/confiabilidad-industrial-mantenimiento-autonomo/",
     title: "Confiabilidad Industrial y Mantenimiento Autónomo: Claves para Erradicar Pérdidas",
     category: "Confiabilidad & FARO",
     readTime: "6 min",
     description: "Cómo la integración del mantenimiento autónomo (estándares LIL) y la capacitación operativa transforman la cultura técnica del piso de planta.",
     icon: Target,
-    targetServiceUrl: "/confiabilidad-industrial",
+    targetServiceUrl: "/confiabilidad-industrial/",
     targetServiceName: "Confiabilidad Industrial",
   },
 ];
@@ -126,7 +126,7 @@ export default function BlogIndex() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/");
     }
 
     let ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -147,7 +147,7 @@ export default function BlogIndex() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/");
     }
 
     return () => {

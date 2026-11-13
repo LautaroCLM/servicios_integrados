@@ -37,7 +37,7 @@ export default function CorrectiveVsPreventiveArticle() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/mantenimiento-correctivo-vs-preventivo");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/mantenimiento-correctivo-vs-preventivo/");
     }
 
     let ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -58,7 +58,7 @@ export default function CorrectiveVsPreventiveArticle() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/mantenimiento-correctivo-vs-preventivo");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/mantenimiento-correctivo-vs-preventivo/");
     }
 
     return () => {
@@ -84,7 +84,7 @@ export default function CorrectiveVsPreventiveArticle() {
                 <ArrowLeft size={13} /> Inicio
               </Link>
               <span>/</span>
-              <Link href="/blog" className="hover:underline">
+              <Link href="/blog/" className="hover:underline">
                 Blog Técnico
               </Link>
               <span>/</span>
@@ -186,11 +186,11 @@ export default function CorrectiveVsPreventiveArticle() {
                 </h3>
                 <p className="mt-3 text-sm text-[#fff7ee]/85">
                   En <strong>Servicios Integrados</strong> ayudamos a las plantas a clasificar sus equipos por criticidad y ejecutar planes de{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>{" "}
                   e{" "}
-                  <Link href="/ingenieria-de-mantenimiento" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/ingenieria-de-mantenimiento/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Ingeniería de Mantenimiento
                   </Link>{" "}
                   que balancean costos y confiabilidad.
@@ -198,7 +198,7 @@ export default function CorrectiveVsPreventiveArticle() {
 
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    href="/mantenimiento-industrial"
+                    href="/mantenimiento-industrial/"
                     className="safety-button inline-flex items-center gap-2 text-xs"
                   >
                     Ver Servicios de Mantenimiento <ArrowRight size={14} />

@@ -155,7 +155,7 @@ export const FAQ_DATA: FaqItem[] = [
     question: "¿Cómo puedo contactar con un especialista?",
     aliases: ["como contactar con un especialista", "hablar con un especialista", "telefono de contacto", "contacto directo"],
     answer:
-      "Puede comunicarse de manera inmediata con nuestros especialistas a través de WhatsApp (11-40705211), mediante llamada telefónica (+54 9 11 5070 5211), o solicitando una visita técnica a través del formulario de la web para coordinar una evaluación en planta.",
+      "Puede comunicarse de manera inmediata con nuestros especialistas a través de WhatsApp (11 4070-5211), mediante llamada telefónica (+54 9 11 5070-5211), o solicitando una visita técnica a través del formulario de la web para coordinar una evaluación en planta.",
     keywords: ["especialista", "técnico", "asesoramiento", "whatsapp", "llamada", "contacto"],
   },
 ];

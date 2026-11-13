@@ -43,7 +43,7 @@ export default function IndustrialOvensMaintenance() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/mantenimiento-hornos-industriales");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/mantenimiento-hornos-industriales/");
     }
 
     // OG Title
@@ -67,7 +67,7 @@ export default function IndustrialOvensMaintenance() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/mantenimiento-hornos-industriales");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/mantenimiento-hornos-industriales/");
     }
 
     return () => {
@@ -291,22 +291,22 @@ export default function IndustrialOvensMaintenance() {
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-[#fff7ee]/80">
                   Combine la atención de sus hornos con nuestros servicios de{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>
                   ,{" "}
-                  <Link href="/torneria-mecanizado" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/torneria-mecanizado/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Tornería y Mecanizado
                   </Link>{" "}
                   y{" "}
-                  <Link href="/confiabilidad-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/confiabilidad-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Confiabilidad Industrial
                   </Link>.
                 </p>
 
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   <Link
-                    href="/mantenimiento-industrial"
+                    href="/mantenimiento-industrial/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors"
                   >
                     <span>Mantenimiento Industrial</span>
@@ -314,7 +314,7 @@ export default function IndustrialOvensMaintenance() {
                   </Link>
 
                   <Link
-                    href="/torneria-mecanizado"
+                    href="/torneria-mecanizado/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors"
                   >
                     <span>Tornería y Mecanizado 24 hs</span>
@@ -322,7 +322,7 @@ export default function IndustrialOvensMaintenance() {
                   </Link>
 
                   <Link
-                    href="/confiabilidad-industrial"
+                    href="/confiabilidad-industrial/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors sm:col-span-2"
                   >
                     <span>Confiabilidad Industrial y Método FARO</span>
@@ -362,7 +362,7 @@ export default function IndustrialOvensMaintenance() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-6 py-4 font-display text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#10181d] transition-all"
               >
-                <Phone size={16} /> WhatsApp: 11-40705211
+                <Phone size={16} /> WhatsApp: 11 4070-5211
               </a>
             </div>
           </div>

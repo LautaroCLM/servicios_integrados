@@ -296,7 +296,7 @@ export function NovedadesButton() {
                       Llámanos
                     </div>
                     <p className="text-[11px] font-medium text-neutral-500 truncate">
-                      +54 9 11 5070 5211
+                      +54 9 11 5070-5211
                     </p>
                   </div>
                 </a>
@@ -571,7 +571,7 @@ export function NovedadesButton() {
                   <span>© {new Date().getFullYear()} <strong>Servicios Integrados</strong> — Mantenimiento e Ingeniería.</span>
                   <span className="hidden sm:inline">•</span>
                   <a
-                    href="/privacidad"
+                    href="/privacidad/"
                     onClick={() => setIsNovedadesModalOpen(false)}
                     className="text-[#a78bfa] underline hover:text-white transition-colors"
                   >

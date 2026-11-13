@@ -49,7 +49,7 @@ export async function processAiChatMessage(
       return {
         success: false,
         message:
-          "Has alcanzado el límite de consultas por el momento. Por favor aguarda unos minutos o contactanos directamente por WhatsApp al 11-40705211.",
+          "Has alcanzado el límite de consultas por el momento. Por favor aguarda unos minutos o contactanos directamente por WhatsApp al 11 4070-5211.",
         isConfigured: true,
       };
     }
@@ -73,7 +73,7 @@ export async function processAiChatMessage(
       return {
         success: false,
         message:
-          "El Asistente IA no se encuentra disponible en este momento. Por favor comunicate directamente por WhatsApp al 11-40705211 o a través de nuestro formulario de contacto.",
+          "El Asistente IA no se encuentra disponible en este momento. Por favor comunicate directamente por WhatsApp al 11 4070-5211 o a través de nuestro formulario de contacto.",
         isConfigured: false,
       };
     }
@@ -153,7 +153,7 @@ export async function processAiChatMessage(
       return {
         success: false,
         message:
-          "En este momento no pudimos procesar tu consulta técnica. Por favor intenta nuevamente o comunicate por WhatsApp al 11-40705211.",
+          "En este momento no pudimos procesar tu consulta técnica. Por favor intenta nuevamente o comunicate por WhatsApp al 11 4070-5211.",
         isConfigured: true,
       };
     }
@@ -165,7 +165,7 @@ export async function processAiChatMessage(
       return {
         success: false,
         message:
-          "No se pudo generar una respuesta técnica en este momento. Por favor comunicate con nuestro equipo al 11-40705211.",
+          "No se pudo generar una respuesta técnica en este momento. Por favor comunicate con nuestro equipo al 11 4070-5211.",
         isConfigured: true,
       };
     }
@@ -180,7 +180,7 @@ export async function processAiChatMessage(
       return {
         success: false,
         message:
-          "La consulta tardó más de lo esperado. Por favor reintenta o escribinos por WhatsApp al 11-40705211 para atención inmediata.",
+          "La consulta tardó más de lo esperado. Por favor reintenta o escribinos por WhatsApp al 11 4070-5211 para atención inmediata.",
         isConfigured: true,
       };
     }
@@ -189,7 +189,7 @@ export async function processAiChatMessage(
     return {
       success: false,
       message:
-        "Ocurrió un inconveniente al conectar con el asistente. Podés contactarnos directamente por WhatsApp al 11-40705211.",
+        "Ocurrió un inconveniente al conectar con el asistente. Podés contactarnos directamente por WhatsApp al 11 4070-5211.",
       isConfigured: true,
     };
   }

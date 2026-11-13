@@ -41,7 +41,7 @@ export default function AutonomousMaintenanceArticle() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/confiabilidad-industrial-mantenimiento-autonomo");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/confiabilidad-industrial-mantenimiento-autonomo/");
     }
 
     let ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -62,7 +62,7 @@ export default function AutonomousMaintenanceArticle() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/confiabilidad-industrial-mantenimiento-autonomo");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/confiabilidad-industrial-mantenimiento-autonomo/");
     }
 
     return () => {
@@ -88,7 +88,7 @@ export default function AutonomousMaintenanceArticle() {
                 <ArrowLeft size={13} /> Inicio
               </Link>
               <span>/</span>
-              <Link href="/blog" className="hover:underline">
+              <Link href="/blog/" className="hover:underline">
                 Blog Técnico
               </Link>
               <span>/</span>
@@ -208,22 +208,22 @@ export default function AutonomousMaintenanceArticle() {
                 </h3>
                 <p className="mt-3 text-sm text-[#fff7ee]/85">
                   Conozca nuestro programa integral de{" "}
-                  <Link href="/confiabilidad-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/confiabilidad-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Confiabilidad Industrial
                   </Link>
                   , articulado con servicios de{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>{" "}
                   e{" "}
-                  <Link href="/ingenieria-de-mantenimiento" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/ingenieria-de-mantenimiento/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Ingeniería de Mantenimiento
                   </Link>.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    href="/confiabilidad-industrial"
+                    href="/confiabilidad-industrial/"
                     className="safety-button inline-flex items-center gap-2 text-xs"
                   >
                     Ver Confiabilidad y Método FARO <ArrowRight size={14} />

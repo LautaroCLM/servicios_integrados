@@ -41,7 +41,7 @@ export default function MachiningTurnery() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/torneria-mecanizado");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/torneria-mecanizado/");
     }
 
     // OG Title
@@ -65,7 +65,7 @@ export default function MachiningTurnery() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/torneria-mecanizado");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/torneria-mecanizado/");
     }
 
     return () => {
@@ -289,22 +289,22 @@ export default function MachiningTurnery() {
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-[#fff7ee]/80">
                   Combine nuestro servicio de tornería con nuestras capacidades integrales de{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>
                   ,{" "}
-                  <Link href="/fabricacion-acero-inoxidable" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/fabricacion-acero-inoxidable/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Fabricación en Acero Inoxidable
                   </Link>{" "}
                   y{" "}
-                  <Link href="/mantenimiento-hornos-industriales" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-hornos-industriales/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento de Hornos Industriales
                   </Link>.
                 </p>
 
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   <Link
-                    href="/mantenimiento-industrial"
+                    href="/mantenimiento-industrial/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors"
                   >
                     <span>Mantenimiento Industrial</span>
@@ -312,7 +312,7 @@ export default function MachiningTurnery() {
                   </Link>
 
                   <Link
-                    href="/fabricacion-acero-inoxidable"
+                    href="/fabricacion-acero-inoxidable/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors"
                   >
                     <span>Fabricación en Acero Inox</span>
@@ -320,7 +320,7 @@ export default function MachiningTurnery() {
                   </Link>
 
                   <Link
-                    href="/mantenimiento-hornos-industriales"
+                    href="/mantenimiento-hornos-industriales/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors sm:col-span-2"
                   >
                     <span>Mantenimiento de Hornos Industriales de Obleas</span>
@@ -360,7 +360,7 @@ export default function MachiningTurnery() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-6 py-4 font-display text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#10181d] transition-all"
               >
-                <Phone size={16} /> WhatsApp: 11-40705211
+                <Phone size={16} /> WhatsApp: 11 4070-5211
               </a>
             </div>
           </div>

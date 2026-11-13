@@ -300,7 +300,7 @@ export function SectorsSection() {
             </div>
             <div className="mt-6 pt-4 border-t border-[#10181d]/10">
               <Link
-                href="/mantenimiento-industrial"
+                href="/mantenimiento-industrial/"
                 className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
               >
                 <span>Ver Mantenimiento Industrial</span>
@@ -333,7 +333,7 @@ export function SectorsSection() {
             </div>
             <div className="mt-6 pt-4 border-t border-[#10181d]/10">
               <Link
-                href="/mantenimiento-hornos-industriales"
+                href="/mantenimiento-hornos-industriales/"
                 className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-[#6d28d9] hover:underline transition-colors"
               >
                 <span>Ver servicio de Hornos y Placas Wafer</span>

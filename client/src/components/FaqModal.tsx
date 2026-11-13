@@ -401,7 +401,7 @@ export function FaqModal({ isOpen, onClose, onNavigateToContact }: FaqModalProps
                 <span>© {new Date().getFullYear()} <strong>Servicios Integrados</strong>. Todos los derechos reservados.</span>
                 <span className="hidden sm:inline">•</span>
                 <a
-                  href="/privacidad"
+                  href="/privacidad/"
                   onClick={onClose}
                   className="text-[#a78bfa] underline hover:text-white transition-colors"
                 >

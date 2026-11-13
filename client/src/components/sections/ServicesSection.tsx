@@ -67,7 +67,7 @@ const SERVICES_DATA: ServiceItem[] = [
     icon: <Wrench size={24} />,
     image: "/img/servicio1.webp",
     imageAlt: "Mantenimiento preventivo, predictivo, correctivo y paradas de planta industrial",
-    link: "/mantenimiento-industrial",
+    link: "/mantenimiento-industrial/",
     linkText: "Ver detalles de Mantenimiento Industrial",
   },
   {
@@ -83,7 +83,7 @@ const SERVICES_DATA: ServiceItem[] = [
     icon: <Cpu size={24} />,
     image: "/img/nuevafoto1.webp",
     imageAlt: "Ingeniería mecánica y diseño de proyectos industriales para plantas de manufactura",
-    link: "/ingenieria-de-mantenimiento",
+    link: "/ingenieria-de-mantenimiento/",
     linkText: "Ver detalles de Ingeniería de Mantenimiento",
   },
   {
@@ -99,7 +99,7 @@ const SERVICES_DATA: ServiceItem[] = [
     icon: <Activity size={24} />,
     image: "/img/servicio3.webp",
     imageAlt: "Fabricación de termos, silos, cañerías sanitarias y estructuras en acero inoxidable",
-    link: "/fabricacion-acero-inoxidable",
+    link: "/fabricacion-acero-inoxidable/",
     linkText: "Ver detalles de Fabricación en Acero Inox",
   },
   {
@@ -115,7 +115,7 @@ const SERVICES_DATA: ServiceItem[] = [
     icon: <Cog size={24} />,
     image: "/images/torneria-mecanizado-taller.webp",
     imageAlt: "Taller de tornería y mecanizado de piezas de repuesto para urgencias industriales 24 hs",
-    link: "/torneria-mecanizado",
+    link: "/torneria-mecanizado/",
     linkText: "Ver detalles de Tornería y Mecanizado",
   },
   {
@@ -131,7 +131,7 @@ const SERVICES_DATA: ServiceItem[] = [
     icon: <Snowflake size={24} />,
     image: "/img/servicio5.webp",
     imageAlt: "Mantenimiento e instalación de chillers, torres de enfriamiento y cámaras frigoríficas",
-    link: "/refrigeracion-industrial",
+    link: "/refrigeracion-industrial/",
     linkText: "Ver detalles de Refrigeración Industrial",
   },
   {
@@ -147,7 +147,7 @@ const SERVICES_DATA: ServiceItem[] = [
     icon: <Flame size={24} />,
     image: "/images/foto3.webp",
     imageAlt: "Limpieza técnica, ajuste y overhaul de planchas de cocción para hornos de obleas",
-    link: "/mantenimiento-hornos-industriales",
+    link: "/mantenimiento-hornos-industriales/",
     linkText: "Ver detalles de Hornos de Obleas",
   },
 ];

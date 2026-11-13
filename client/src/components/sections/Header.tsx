@@ -17,7 +17,7 @@ export function Brand({ inverse = false }: { inverse?: boolean }) {
     <a href="/#inicio" aria-label="Servicios Integrados — Inicio" className="group flex items-center gap-3">
       <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-sm transition-transform duration-300 group-hover:scale-105">
         <img
-          src="/images/logoapp.png"
+          src="/img/logoapp2.png"
           alt="Servicios Integrados — Mantenimiento, Ingeniería y Confiabilidad Industrial"
           loading="eager"
           decoding="async"

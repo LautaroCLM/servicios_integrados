@@ -154,6 +154,18 @@ Metadatos:
 
   // Check if SMTP is configured
   if (!host || !user || !pass) {
+    // Solo se simula el envío en desarrollo local. En producción se informa el error
+    // para que el visitante use WhatsApp y la consulta no se pierda en silencio.
+    const allowSimulation =
+      process.env.NODE_ENV === "development" || process.env.ALLOW_EMAIL_SIMULATION === "true";
+    if (!allowSimulation) {
+      console.error("❌ [EMAIL SERVICE] SMTP no configurado: faltan SMTP_HOST, SMTP_USER o SMTP_PASS.");
+      return {
+        success: false,
+        error: "SMTP no configurado",
+      };
+    }
+
     console.log("\n==================================================");
     console.log("ℹ️ [EMAIL SERVICE] SMTP no configurado (modo desarrollo / fallback)");
     console.log(`Destinatario previsto: ${to}`);

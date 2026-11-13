@@ -2,16 +2,9 @@ import type { Config, Context } from "@netlify/functions";
 import { handleAdminNovedadesRequest } from "../../server/adminNovedadesHandler.js";
 
 export default async function handler(req: Request, context: Context): Promise<Response> {
-  // Manejo de preflight CORS si fuera necesario
+  // Sin CORS abierto: el panel se sirve desde el mismo dominio.
   if (req.method === "OPTIONS") {
-    return new Response(null, {
-      status: 204,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
-      },
-    });
+    return new Response(null, { status: 204 });
   }
 
   try {
@@ -40,7 +33,13 @@ export default async function handler(req: Request, context: Context): Promise<R
       action = req.method === "GET" ? "list" : "verify";
     }
 
-    const result = await handleAdminNovedadesRequest(action, body, authHeader);
+    const clientIp =
+      req.headers.get("x-nf-client-connection-ip") ||
+      context.ip ||
+      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      "unknown";
+
+    const result = await handleAdminNovedadesRequest(action, body, authHeader, clientIp);
 
     return new Response(JSON.stringify(result.data), {
       status: result.status,

@@ -99,7 +99,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
       const localAnswer = findPredefinedResponse(text);
       const answerText =
         localAnswer ||
-        "En Servicios Integrados brindamos soluciones de mantenimiento industrial, visitas técnicas y asesoramiento especializado. Podés consultarnos directamente por WhatsApp al 11-40705211.";
+        "En Servicios Integrados brindamos soluciones de mantenimiento industrial, visitas técnicas y asesoramiento especializado. Podés consultarnos directamente por WhatsApp al 11 4070-5211.";
 
       await new Promise((resolve) => setTimeout(resolve, 600));
       setMessages((prev) => [...prev, { role: "assistant", content: answerText }]);
@@ -126,7 +126,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
       } else {
         const fallbackMsg =
           result.message ||
-          "El Asistente IA no se encuentra disponible temporalmente. Podés comunicarte directamente con nuestro equipo por WhatsApp al 11-40705211.";
+          "El Asistente IA no se encuentra disponible temporalmente. Podés comunicarte directamente con nuestro equipo por WhatsApp al 11 4070-5211.";
         setMessages((prev) => [...prev, { role: "assistant", content: fallbackMsg }]);
       }
     } catch {
@@ -135,7 +135,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
         {
           role: "assistant",
           content:
-            "Ocurrió un error de conexión al consultar al asistente. Podés contactarnos directamente por WhatsApp al 11-40705211 para atención inmediata.",
+            "Ocurrió un error de conexión al consultar al asistente. Podés contactarnos directamente por WhatsApp al 11 4070-5211 para atención inmediata.",
         },
       ]);
     } finally {

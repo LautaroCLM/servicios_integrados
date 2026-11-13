@@ -81,7 +81,7 @@ export function ContactSection() {
       if (!response.ok || !result.success) {
         const message =
           result.message ||
-          "No se pudo enviar la consulta técnica en este momento. Por favor intente nuevamente o comuníquese por WhatsApp al 11-40705211.";
+          "No se pudo enviar la consulta técnica en este momento. Por favor intente nuevamente o comuníquese por WhatsApp al 11 4070-5211.";
         setFormStatus("error");
         setErrorMessage(message);
         toast.error("Error al enviar la consulta", {
@@ -99,7 +99,7 @@ export function ContactSection() {
       reset();
     } catch {
       const networkError =
-        "Ocurrió un error de conexión al enviar el formulario. Por favor verifique su conexión o comuníquese por WhatsApp al 11-40705211.";
+        "Ocurrió un error de conexión al enviar el formulario. Por favor verifique su conexión o comuníquese por WhatsApp al 11 4070-5211.";
       setFormStatus("error");
       setErrorMessage(networkError);
       toast.error("Error de conexión", {
@@ -148,7 +148,7 @@ export function ContactSection() {
                 className="inline-flex items-center gap-4 rounded-lg bg-[#10181d] px-6 py-4 font-display text-sm font-bold uppercase tracking-wider text-[#fff7ee] transition-transform duration-200 hover:-translate-y-1 active:scale-[.98]"
               >
                 <MessageSquare size={20} className="text-[#a78bfa]" />
-                WhatsApp Directo: 11-40705211
+                WhatsApp Directo: 11 4070-5211
               </a>
 
               <a
@@ -156,7 +156,7 @@ export function ContactSection() {
                 className="inline-flex items-center gap-4 rounded-lg border border-[#fff7ee]/40 bg-[#fff7ee]/10 px-6 py-4 font-display text-sm font-bold uppercase tracking-wider text-[#fff7ee] backdrop-blur-sm transition-colors duration-200 hover:bg-[#fff7ee] hover:text-[#10181d]"
               >
                 <Phone size={20} />
-                Teléfono: 054-9-11-50705211
+                Teléfono: +54 9 11 5070-5211
               </a>
             </div>
 
@@ -429,7 +429,7 @@ export function ContactSection() {
                   <p className="mt-4 text-center text-[11px] leading-relaxed text-[#fff7ee]/60">
                     Al enviar este formulario, usted acepta nuestra{" "}
                     <a
-                      href="/privacidad"
+                      href="/privacidad/"
                       className="text-[#a78bfa] underline hover:text-white transition-colors"
                     >
                       Política de Privacidad

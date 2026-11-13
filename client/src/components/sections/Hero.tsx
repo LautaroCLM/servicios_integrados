@@ -53,15 +53,13 @@ export function Hero() {
             >
               Soluciones para la Industria · Más de 30 años de trayectoria
             </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 32 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.46, duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-              className="headline max-w-[980px] text-[clamp(2.1rem,7vw,7.2rem)]"
-            >
+            {/* Sin animación de entrada: el H1 es el contenido principal (LCP) y debe verse
+                desde el HTML prerenderizado, sin esperar al JavaScript. Incluye la marca. */}
+            <h1 className="headline max-w-[980px] text-[clamp(2.1rem,7vw,7.2rem)]">
+              <span className="eyebrow mb-4 block text-[#a78bfa]">Servicios Integrados</span>
               Mantenimiento industrial, ingeniería y{" "}
               <span className="text-[#7c3aed]">confiabilidad.</span>
-            </motion.h1>
+            </h1>
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}

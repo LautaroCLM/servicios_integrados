@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/privacidad");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/privacidad/");
     }
 
     return () => {
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
           >
             <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-sm transition-transform duration-300 group-hover:scale-105">
               <img
-                src="/images/logoapp.png"
+                src="/img/logoapp2.png"
                 alt="Servicios Integrados — Mantenimiento, Ingeniería y Confiabilidad Industrial"
                 loading="eager"
                 decoding="async"
@@ -231,7 +231,7 @@ export default function PrivacyPolicy() {
                 <li>Solicitar la <strong>supresión o cancelación</strong> definitiva de sus datos de nuestros registros cuando así lo desee.</li>
               </ul>
               <p className="pt-2 text-xs sm:text-sm">
-                Para ejercer cualquiera de estos derechos sin costo alguno, basta con remitir un correo electrónico con su solicitud a <a href="mailto:serviciosintegrados68@gmail.com" className="text-[#a78bfa] underline font-semibold">serviciosintegrados68@gmail.com</a> o comunicarse vía WhatsApp al <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="text-[#a78bfa] underline font-semibold">11-40705211</a>.
+                Para ejercer cualquiera de estos derechos sin costo alguno, basta con remitir un correo electrónico con su solicitud a <a href="mailto:serviciosintegrados68@gmail.com" className="text-[#a78bfa] underline font-semibold">serviciosintegrados68@gmail.com</a> o comunicarse vía WhatsApp al <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="text-[#a78bfa] underline font-semibold">11 4070-5211</a>.
               </p>
             </section>
 
