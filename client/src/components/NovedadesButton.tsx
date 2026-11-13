@@ -168,13 +168,15 @@ export function NovedadesButton() {
         onNavigateToContact={handleContactClickFromChat}
       />
 
-      {/* Floating Speed-Dial & AI Menu Anchor (Fixed Bottom-Right) */}
+      {/* Un único botón flotante (abajo a la izquierda) que abre el menú con Asistente IA,
+          Novedades, preguntas frecuentes y contacto. Va a la izquierda para no chocar con el
+          cartel "Powered by Netlify" (esquina inferior derecha) y es compacto (círculo en
+          celular) para tapar lo mínimo del contenido. */}
       <div
         ref={menuContainerRef}
-        className="fixed z-40 flex flex-col items-end gap-2.5"
+        className="fixed z-40 flex flex-col items-start gap-2.5 bottom-[calc(1.5rem_+_env(safe-area-inset-bottom,0px))]"
         style={{
-          bottom: "calc(1.5rem + env(safe-area-inset-bottom, 0px))",
-          right: "calc(1.5rem + env(safe-area-inset-right, 0px))",
+          left: "calc(1.5rem + env(safe-area-inset-left, 0px))",
         }}
       >
         {/* 2. Desplegable emergente de Contacto y Novedades hacia arriba */}
@@ -187,10 +189,34 @@ export function NovedadesButton() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 12, scale: 0.95 }}
               transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
-              style={{ transformOrigin: "bottom right" }}
+              style={{ transformOrigin: "bottom left" }}
               className="mb-1 w-[290px] sm:w-[320px] overflow-hidden rounded-2xl border border-black/10 bg-white p-2 text-[#10181d] shadow-[0_20px_50px_rgba(0,0,0,0.25)] ring-1 ring-black/5"
             >
               <div className="flex flex-col divide-y divide-neutral-100">
+                {/* 0. ASISTENTE IA (antes era un botón flotante aparte) */}
+                <button
+                  type="button"
+                  onClick={handleToggleChat}
+                  aria-haspopup="dialog"
+                  className="group flex w-full items-center gap-3.5 rounded-xl p-3 text-left transition-all duration-200 hover:bg-neutral-50 active:scale-[0.98] cursor-pointer"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#10181d] text-[#a78bfa] shadow-md shadow-black/20 transition-transform duration-300 group-hover:scale-105">
+                    <Sparkles size={19} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
+                      Asistente IA
+                    </div>
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
+                      Consultá sobre nuestros servicios
+                    </p>
+                  </div>
+                  <ArrowUpRight
+                    size={16}
+                    className="text-[#6d28d9] opacity-70 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100"
+                  />
+                </button>
+
                 {/* 1. TOP HIERARCHY: NOVEDADES */}
                 <button
                   type="button"
@@ -205,11 +231,11 @@ export function NovedadesButton() {
                       <span className="font-display text-sm font-extrabold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                         Novedades
                       </span>
-                      <span className="rounded-full bg-[#6d28d9] px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">
+                      <span className="rounded-full bg-[#6d28d9] px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
                         Nuevo
                       </span>
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Últimas actualizaciones y proyectos
                     </p>
                   </div>
@@ -232,7 +258,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Preguntas frecuentes
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Respuestas sobre nuestros servicios
                     </p>
                   </div>
@@ -257,7 +283,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       WhatsApp
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Escríbenos por WhatsApp
                     </p>
                   </div>
@@ -265,7 +291,7 @@ export function NovedadesButton() {
 
                 {/* 4. GMAIL */}
                 <a
-                  href="mailto:serviciosintegrados68@gmail.com"
+                  href="mailto:antonioa@serviciosintegradosweb.com"
                   onClick={() => setIsMenuOpen(false)}
                   className="group flex w-full items-center gap-3.5 rounded-xl p-3 text-left transition-all duration-200 hover:bg-neutral-50 active:scale-[0.98]"
                 >
@@ -276,7 +302,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Gmail
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Envíanos un correo
                     </p>
                   </div>
@@ -295,8 +321,8 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Llámanos
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
-                      +54 9 11 5070 5211
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
+                      +54 9 11 5070-5211
                     </p>
                   </div>
                 </a>
@@ -314,7 +340,7 @@ export function NovedadesButton() {
                     <div className="font-display text-sm font-bold text-[#10181d] group-hover:text-[#6d28d9] transition-colors">
                       Agendar reunión
                     </div>
-                    <p className="text-[11px] font-medium text-neutral-500 truncate">
+                    <p className="text-[12px] font-medium text-neutral-500 truncate">
                       Coordinemos una reunión
                     </p>
                   </div>
@@ -324,46 +350,12 @@ export function NovedadesButton() {
           )}
         </AnimatePresence>
 
-        {/* =========================================================================
-         * 3. BOTÓN FLOTANTE INDEPENDIENTE: ASISTENTE IA
-         * -------------------------------------------------------------------------
-         * Ubicado SIEMPRE arriba de [ CONTACTO Y NOVEDADES ].
-         * Permanece visible incluso cuando el menú inferior está desplegado hacia arriba.
-         * ========================================================================= */}
-        <button
-          type="button"
-          onClick={handleToggleChat}
-          className={`group inline-flex items-center justify-center gap-2 rounded-2xl border px-4 py-3 sm:px-4.5 sm:py-3.5 font-display text-xs font-bold uppercase tracking-wider shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97] cursor-pointer ${
-            isChatOpen
-              ? "bg-[#6d28d9] text-white border-[#a78bfa]/50 ring-2 ring-[#a78bfa]/30 shadow-[0_12px_36px_rgba(109,40,217,0.4)]"
-              : "bg-[#10181d] text-white border-white/15 hover:border-[#a78bfa]/50 hover:bg-[#152026] hover:shadow-[0_14px_36px_rgba(109,40,217,0.25)]"
-          }`}
-          aria-haspopup="dialog"
-          aria-expanded={isChatOpen}
-          aria-label={isChatOpen ? "Cerrar Asistente IA" : "Abrir Asistente IA"}
-        >
-          <div className="flex items-center justify-center">
-            <Sparkles
-              size={16}
-              className={`transition-transform duration-300 group-hover:rotate-12 ${
-                isChatOpen ? "text-white" : "text-[#a78bfa] animate-pulse"
-              }`}
-            />
-          </div>
-          <span className="font-extrabold tracking-wide">
-            {isChatOpen ? "CERRAR ASISTENTE" : "ASISTENTE IA"}
-          </span>
-        </button>
-
-        {/* =========================================================================
-         * 4. BOTÓN FLOTANTE: CONTACTO Y NOVEDADES
-         * -------------------------------------------------------------------------
-         * Disparador inferior principal.
-         * ========================================================================= */}
+        {/* Botón flotante único. Círculo de 56 px en celular (solo ícono) y píldora con texto
+            desde sm. Abre el menú de contacto, novedades y asistente. */}
         <button
           type="button"
           onClick={handleToggleMenu}
-          className={`inline-flex items-center justify-center gap-2.5 rounded-2xl border bg-white px-5 py-3.5 font-display text-xs font-bold uppercase tracking-wider text-[#10181d] shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(0,0,0,0.22)] active:translate-y-0 active:scale-[0.97] cursor-pointer ${
+          className={`group inline-flex h-14 w-14 items-center justify-center gap-2.5 rounded-full border bg-white font-display text-xs font-bold uppercase tracking-wider text-[#10181d] shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)] active:translate-y-0 active:scale-[0.97] cursor-pointer sm:h-12 sm:w-auto sm:rounded-2xl sm:px-5 ${
             isMenuOpen
               ? "border-[#6d28d9]/40 ring-2 ring-[#6d28d9]/20"
               : "border-black/10 hover:border-black/20"
@@ -371,7 +363,7 @@ export function NovedadesButton() {
           aria-haspopup="true"
           aria-expanded={isMenuOpen}
           aria-controls="novedades-menu"
-          aria-label={isMenuOpen ? "Cerrar menú de contacto y novedades" : "Abrir menú de contacto y novedades"}
+          aria-label={isMenuOpen ? "Cerrar menú de contacto y novedades" : "Abrir menú de contacto, novedades y asistente"}
         >
           <motion.div
             animate={{ rotate: isMenuOpen ? 90 : 0 }}
@@ -379,20 +371,17 @@ export function NovedadesButton() {
             className="flex items-center justify-center"
           >
             {isMenuOpen ? (
-              <X size={18} className="text-[#6d28d9]" strokeWidth={2.4} />
+              <X size={22} className="text-[#6d28d9]" strokeWidth={2.4} />
             ) : (
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#6d28d9] opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#6d28d9]" />
-              </span>
+              <MessageSquare size={22} className="text-[#6d28d9]" strokeWidth={2.2} />
             )}
           </motion.div>
-          <span className="font-extrabold text-[#10181d] tracking-wide">
-            {isMenuOpen ? "CERRAR" : "CONTACTO Y NOVEDADES"}
+          <span className="hidden font-extrabold tracking-wide text-[#10181d] sm:inline">
+            {isMenuOpen ? "CERRAR" : "CONTACTO"}
           </span>
           <ChevronUp
             size={16}
-            className={`text-[#6d28d9] transition-transform duration-300 ${
+            className={`hidden text-[#6d28d9] transition-transform duration-300 sm:block ${
               isMenuOpen ? "rotate-180" : ""
             }`}
           />
@@ -441,7 +430,7 @@ export function NovedadesButton() {
                 {/* Top Row: Tag + Close Button */}
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a78bfa]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-3 py-1 text-[12px] font-bold uppercase tracking-widest text-[#a78bfa]">
                       <Sparkles size={12} /> Centro de Novedades
                     </span>
                     <span className="text-xs font-medium text-[#fff7ee]/60">
@@ -515,11 +504,11 @@ export function NovedadesButton() {
                             />
                           <div className="absolute inset-0 bg-gradient-to-t from-[#10181d] via-transparent to-transparent opacity-75" />
                           <div className="absolute top-3 left-3 flex items-center gap-2">
-                            <span className="rounded-md border border-[#a78bfa]/40 bg-[#6d28d9]/90 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
+                            <span className="rounded-md border border-[#a78bfa]/40 bg-[#6d28d9]/90 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md">
                               {item.category}
                             </span>
                           </div>
-                          <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-[11px] font-semibold text-[#fff7ee]/90">
+                          <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-[12px] font-semibold text-[#fff7ee]/90">
                             <Calendar size={13} className="text-[#a78bfa]" />
                             {item.date}
                           </div>
@@ -571,7 +560,7 @@ export function NovedadesButton() {
                   <span>© {new Date().getFullYear()} <strong>Servicios Integrados</strong> — Mantenimiento e Ingeniería.</span>
                   <span className="hidden sm:inline">•</span>
                   <a
-                    href="/privacidad"
+                    href="/privacidad/"
                     onClick={() => setIsNovedadesModalOpen(false)}
                     className="text-[#a78bfa] underline hover:text-white transition-colors"
                   >

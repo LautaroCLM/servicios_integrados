@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/privacidad");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/privacidad/");
     }
 
     return () => {
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
           >
             <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-sm transition-transform duration-300 group-hover:scale-105">
               <img
-                src="/images/logoapp.png"
+                src="/img/logoapp2.webp"
                 alt="Servicios Integrados — Mantenimiento, Ingeniería y Confiabilidad Industrial"
                 loading="eager"
                 decoding="async"
@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
               <div className="font-display text-[1.25rem] font-bold leading-none tracking-[-0.05em] uppercase">
                 Servicios <span className="text-[#a78bfa]">Integrados</span>
               </div>
-              <div className="mt-1 text-[0.48rem] font-bold uppercase tracking-[0.18em] opacity-80">
+              <div className="mt-1 hidden text-[0.6875rem] font-bold uppercase tracking-[0.14em] opacity-80 sm:block">
                 Mantenimiento · Ingeniería · Confiabilidad
               </div>
             </div>
@@ -121,8 +121,7 @@ export default function PrivacyPolicy() {
                   Para cualquier consulta relativa a la gestión de datos, requerimientos societarios formales o contacto institucional, puede comunicarse a:
                 </p>
                 <ul className="mt-2 space-y-1 font-semibold text-white">
-                  <li>• Correo Electrónico Principal: <a href="mailto:serviciosintegrados68@gmail.com" className="text-[#a78bfa] underline">serviciosintegrados68@gmail.com</a></li>
-                  <li>• Correo Alternativo Técnico: <a href="mailto:antonionandrada@gmail.com" className="text-[#a78bfa] underline">antonionandrada@gmail.com</a></li>
+                  <li>• Correo Electrónico: <a href="mailto:antonioa@serviciosintegradosweb.com" className="text-[#a78bfa] underline">antonioa@serviciosintegradosweb.com</a></li>
                   <li>• Teléfono / WhatsApp: <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="text-[#a78bfa] underline">+54 9 11 4070-5211</a> / <a href="tel:+5491150705211" className="text-[#a78bfa] underline">+54 9 11 5070-5211</a></li>
                 </ul>
               </div>
@@ -231,7 +230,7 @@ export default function PrivacyPolicy() {
                 <li>Solicitar la <strong>supresión o cancelación</strong> definitiva de sus datos de nuestros registros cuando así lo desee.</li>
               </ul>
               <p className="pt-2 text-xs sm:text-sm">
-                Para ejercer cualquiera de estos derechos sin costo alguno, basta con remitir un correo electrónico con su solicitud a <a href="mailto:serviciosintegrados68@gmail.com" className="text-[#a78bfa] underline font-semibold">serviciosintegrados68@gmail.com</a> o comunicarse vía WhatsApp al <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="text-[#a78bfa] underline font-semibold">11-40705211</a>.
+                Para ejercer cualquiera de estos derechos sin costo alguno, basta con remitir un correo electrónico con su solicitud a <a href="mailto:antonioa@serviciosintegradosweb.com" className="text-[#a78bfa] underline font-semibold">antonioa@serviciosintegradosweb.com</a> o comunicarse vía WhatsApp al <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="text-[#a78bfa] underline font-semibold">11 4070-5211</a>.
               </p>
             </section>
 
@@ -293,8 +292,8 @@ export default function PrivacyPolicy() {
               Tel: +54 9 11 5070-5211
             </a>
             <span>•</span>
-            <a href="mailto:serviciosintegrados68@gmail.com" className="hover:text-white transition-colors">
-              serviciosintegrados68@gmail.com
+            <a href="mailto:antonioa@serviciosintegradosweb.com" className="hover:text-white transition-colors">
+              antonioa@serviciosintegradosweb.com
             </a>
           </div>
         </div>

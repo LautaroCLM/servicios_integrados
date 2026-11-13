@@ -129,7 +129,7 @@ export function FaqModal({ isOpen, onClose, onNavigateToContact }: FaqModalProps
               {/* Top Row: Tag + Close Button */}
               <div className="flex items-center justify-between gap-4">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a78bfa]">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-[#a78bfa]/40 bg-[#6d28d9]/30 px-3 py-1 text-[12px] font-bold uppercase tracking-widest text-[#a78bfa]">
                     <CircleHelp size={13} /> Preguntas Frecuentes
                   </span>
                   <span className="text-xs font-medium text-[#fff7ee]/60">
@@ -190,7 +190,7 @@ export function FaqModal({ isOpen, onClose, onNavigateToContact }: FaqModalProps
                   )}
                 </div>
 
-                <div className="flex items-center justify-between sm:justify-end gap-2 text-[11px] text-white/60">
+                <div className="flex items-center justify-between sm:justify-end gap-2 text-[12px] text-white/60">
                   <button
                     type="button"
                     onClick={expandAll}
@@ -275,7 +275,7 @@ export function FaqModal({ isOpen, onClose, onNavigateToContact }: FaqModalProps
                         >
                           <div className="flex items-start gap-3.5">
                             <span
-                              className={`mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md text-[11px] font-bold font-mono transition-colors ${
+                              className={`mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md text-[12px] font-bold font-mono transition-colors ${
                                 isOpen
                                   ? "bg-[#6d28d9] text-white"
                                   : "border border-white/15 bg-white/5 text-white/70"
@@ -285,7 +285,7 @@ export function FaqModal({ isOpen, onClose, onNavigateToContact }: FaqModalProps
                             </span>
                             <div>
                               <div className="flex items-center gap-2 mb-1">
-                                <span className="text-[10px] font-bold uppercase tracking-wider text-[#a78bfa]">
+                                <span className="text-[11px] font-bold uppercase tracking-wider text-[#a78bfa]">
                                   {faq.category}
                                 </span>
                               </div>
@@ -346,7 +346,7 @@ export function FaqModal({ isOpen, onClose, onNavigateToContact }: FaqModalProps
                                     </a>
                                   </div>
                                 ) : (
-                                  <div className="mt-2 flex items-center justify-between text-[11px] text-white/50 pt-2 border-t border-white/5">
+                                  <div className="mt-2 flex items-center justify-between text-[12px] text-white/50 pt-2 border-t border-white/5">
                                     <span>Servicios Integrados — Mantenimiento Industrial</span>
                                     <button
                                       type="button"
@@ -401,7 +401,7 @@ export function FaqModal({ isOpen, onClose, onNavigateToContact }: FaqModalProps
                 <span>© {new Date().getFullYear()} <strong>Servicios Integrados</strong>. Todos los derechos reservados.</span>
                 <span className="hidden sm:inline">•</span>
                 <a
-                  href="/privacidad"
+                  href="/privacidad/"
                   onClick={onClose}
                   className="text-[#a78bfa] underline hover:text-white transition-colors"
                 >

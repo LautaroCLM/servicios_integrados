@@ -39,7 +39,7 @@ export default async function handler(req: Request, context: Context): Promise<R
       JSON.stringify({
         success: false,
         message:
-          "Ocurrió un error inesperado al procesar la consulta. Por favor intente nuevamente o comuníquese por WhatsApp al 11-40705211.",
+          "Ocurrió un error inesperado al procesar la consulta. Por favor intente nuevamente o comuníquese por WhatsApp al 11 4070-5211.",
       }),
       {
         status: 500,

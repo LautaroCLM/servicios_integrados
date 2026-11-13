@@ -85,7 +85,7 @@ export default function NotFound() {
           >
             <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-sm transition-transform duration-300 group-hover:scale-105">
               <img
-                src="/images/logoapp.png"
+                src="/img/logoapp2.webp"
                 alt="Servicios Integrados — Mantenimiento, Ingeniería y Confiabilidad Industrial"
                 loading="eager"
                 decoding="async"
@@ -96,7 +96,7 @@ export default function NotFound() {
               <div className="font-display text-[1.25rem] font-bold leading-none tracking-[-0.05em] uppercase">
                 Servicios <span className="text-[#a78bfa]">Integrados</span>
               </div>
-              <div className="mt-1 text-[0.48rem] font-bold uppercase tracking-[0.18em] opacity-80">
+              <div className="mt-1 hidden text-[0.6875rem] font-bold uppercase tracking-[0.14em] opacity-80 sm:block">
                 Mantenimiento · Ingeniería · Confiabilidad
               </div>
             </div>
@@ -202,14 +202,14 @@ export default function NotFound() {
             </a>
             <span>•</span>
             <a href="https://wa.me/5491140705211" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-              WhatsApp: 11-40705211
+              WhatsApp: 11 4070-5211
             </a>
             <span>•</span>
-            <a href="mailto:serviciosintegrados68@gmail.com" className="hover:text-white transition-colors">
-              serviciosintegrados68@gmail.com
+            <a href="mailto:antonioa@serviciosintegradosweb.com" className="hover:text-white transition-colors">
+              antonioa@serviciosintegradosweb.com
             </a>
             <span>•</span>
-            <a href="/privacidad" className="text-[#a78bfa] underline hover:text-white transition-colors">
+            <a href="/privacidad/" className="text-[#a78bfa] underline hover:text-white transition-colors">
               Política de Privacidad
             </a>
           </div>

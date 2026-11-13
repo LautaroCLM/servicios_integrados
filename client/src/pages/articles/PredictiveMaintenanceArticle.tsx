@@ -39,7 +39,7 @@ export default function PredictiveMaintenanceArticle() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/mantenimiento-predictivo-industrial");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/mantenimiento-predictivo-industrial/");
     }
 
     let ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -60,7 +60,7 @@ export default function PredictiveMaintenanceArticle() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/mantenimiento-predictivo-industrial");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/mantenimiento-predictivo-industrial/");
     }
 
     return () => {
@@ -86,7 +86,7 @@ export default function PredictiveMaintenanceArticle() {
                 <ArrowLeft size={13} /> Inicio
               </Link>
               <span>/</span>
-              <Link href="/blog" className="hover:underline">
+              <Link href="/blog/" className="hover:underline">
                 Blog Técnico
               </Link>
               <span>/</span>
@@ -202,18 +202,18 @@ export default function PredictiveMaintenanceArticle() {
                 </h3>
                 <p className="mt-3 text-sm text-[#fff7ee]/85">
                   Combine la precisión del diagnóstico con la capacidad de respuesta inmediata de nuestros servicios de{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>{" "}
                   y de{" "}
-                  <Link href="/ingenieria-de-mantenimiento" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/ingenieria-de-mantenimiento/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Ingeniería de Mantenimiento
                   </Link>.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    href="/ingenieria-de-mantenimiento"
+                    href="/ingenieria-de-mantenimiento/"
                     className="safety-button inline-flex items-center gap-2 text-xs"
                   >
                     Ver Ingeniería de Mantenimiento <ArrowRight size={14} />

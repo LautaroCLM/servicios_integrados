@@ -69,7 +69,7 @@ export default async function handler(req: Request, context: Context): Promise<R
         JSON.stringify({
           success: false,
           message:
-            "Ha alcanzado el límite de consultas permitidas por el momento. Por favor espere unos minutos o comuníquese directamente por WhatsApp al 11-40705211.",
+            "Ha alcanzado el límite de consultas permitidas por el momento. Por favor espere unos minutos o comuníquese directamente por WhatsApp al 11 4070-5211.",
         }),
         {
           status: 429,
@@ -110,7 +110,7 @@ export default async function handler(req: Request, context: Context): Promise<R
         JSON.stringify({
           success: false,
           message:
-            "Ocurrió un inconveniente al procesar el envío del correo. Por favor intente nuevamente o comuníquese por WhatsApp al 11-40705211.",
+            "Ocurrió un inconveniente al procesar el envío del correo. Por favor intente nuevamente o comuníquese por WhatsApp al 11 4070-5211.",
           error: process.env.NODE_ENV === "development" ? emailResult.error : undefined,
         }),
         {

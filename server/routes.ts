@@ -74,7 +74,7 @@ apiRouter.post("/contact", async (req: Request, res: Response): Promise<void> =>
       res.status(429).json({
         success: false,
         message:
-          "Ha alcanzado el límite de consultas permitidas por el momento. Por favor espere unos minutos o comuníquese directamente por WhatsApp al 11-40705211.",
+          "Ha alcanzado el límite de consultas permitidas por el momento. Por favor espere unos minutos o comuníquese directamente por WhatsApp al 11 4070-5211.",
       });
       return;
     }
@@ -110,7 +110,7 @@ apiRouter.post("/contact", async (req: Request, res: Response): Promise<void> =>
       res.status(500).json({
         success: false,
         message:
-          "Ocurrió un inconveniente al procesar el envío del correo. Por favor intente nuevamente o comuníquese por WhatsApp al 11-40705211.",
+          "Ocurrió un inconveniente al procesar el envío del correo. Por favor intente nuevamente o comuníquese por WhatsApp al 11 4070-5211.",
         error: process.env.NODE_ENV === "development" ? emailResult.error : undefined,
       });
       return;
@@ -149,7 +149,7 @@ apiRouter.post("/ai-chat", async (req: Request, res: Response): Promise<void> =>
     res.status(500).json({
       success: false,
       message:
-        "Ocurrió un error inesperado al procesar la consulta. Por favor comuníquese por WhatsApp al 11-40705211.",
+        "Ocurrió un error inesperado al procesar la consulta. Por favor comuníquese por WhatsApp al 11 4070-5211.",
     });
   }
 });
@@ -167,7 +167,8 @@ apiRouter.all("/admin-novedades*", async (req: Request, res: Response): Promise<
     if (!action) action = req.method === "GET" ? "list" : "verify";
 
     const authHeader = req.headers.authorization || null;
-    const result = await handleAdminNovedadesRequest(action, req.body, authHeader);
+    const clientIp = req.socket.remoteAddress || "unknown";
+    const result = await handleAdminNovedadesRequest(action, req.body, authHeader, clientIp);
     res.status(result.status).json(result.data);
   } catch (error: any) {
     console.error("❌ Error en Express /api/admin-novedades:", error);

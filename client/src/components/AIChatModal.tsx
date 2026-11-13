@@ -99,7 +99,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
       const localAnswer = findPredefinedResponse(text);
       const answerText =
         localAnswer ||
-        "En Servicios Integrados brindamos soluciones de mantenimiento industrial, visitas técnicas y asesoramiento especializado. Podés consultarnos directamente por WhatsApp al 11-40705211.";
+        "En Servicios Integrados brindamos soluciones de mantenimiento industrial, visitas técnicas y asesoramiento especializado. Podés consultarnos directamente por WhatsApp al 11 4070-5211.";
 
       await new Promise((resolve) => setTimeout(resolve, 600));
       setMessages((prev) => [...prev, { role: "assistant", content: answerText }]);
@@ -126,7 +126,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
       } else {
         const fallbackMsg =
           result.message ||
-          "El Asistente IA no se encuentra disponible temporalmente. Podés comunicarte directamente con nuestro equipo por WhatsApp al 11-40705211.";
+          "El Asistente IA no se encuentra disponible temporalmente. Podés comunicarte directamente con nuestro equipo por WhatsApp al 11 4070-5211.";
         setMessages((prev) => [...prev, { role: "assistant", content: fallbackMsg }]);
       }
     } catch {
@@ -135,7 +135,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
         {
           role: "assistant",
           content:
-            "Ocurrió un error de conexión al consultar al asistente. Podés contactarnos directamente por WhatsApp al 11-40705211 para atención inmediata.",
+            "Ocurrió un error de conexión al consultar al asistente. Podés contactarnos directamente por WhatsApp al 11 4070-5211 para atención inmediata.",
         },
       ]);
     } finally {
@@ -178,8 +178,8 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.96 }}
             transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-            style={{ transformOrigin: "bottom right" }}
-            className="fixed z-[60] inset-x-3 bottom-3 sm:inset-x-auto sm:right-6 sm:bottom-24 w-auto sm:w-[410px] md:w-[430px] h-[calc(100dvh-1.5rem)] max-h-[580px] sm:h-[min(540px,calc(100dvh-7.5rem))] sm:max-h-[calc(100dvh-7.5rem)] flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-white/15 bg-[#10181d] text-[#fff7ee] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.08)] select-text"
+            style={{ transformOrigin: "bottom left" }}
+            className="fixed z-[60] inset-x-3 bottom-3 sm:inset-x-auto sm:left-6 sm:bottom-24 w-auto sm:w-[410px] md:w-[430px] h-[calc(100dvh-1.5rem)] max-h-[580px] sm:h-[min(540px,calc(100dvh-7.5rem))] sm:max-h-[calc(100dvh-7.5rem)] flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-white/15 bg-[#10181d] text-[#fff7ee] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.08)] select-text"
             role="dialog"
             aria-labelledby="ai-chat-title"
           >
@@ -197,12 +197,12 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
                     <h3 id="ai-chat-title" className="font-display text-xs sm:text-sm font-bold text-white truncate">
                       Asistente de Servicios Integrados
                     </h3>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-1.5 py-0.5 text-[9px] font-bold text-emerald-300 border border-emerald-500/30 shrink-0">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/20 px-1.5 py-0.5 text-[11px] font-bold text-emerald-300 border border-emerald-500/30 shrink-0">
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                       Online
                     </span>
                   </div>
-                  <p className="text-[10px] sm:text-[11px] font-medium text-[#fff7ee]/60 truncate">
+                  <p className="text-[11px] sm:text-[12px] font-medium text-[#fff7ee]/60 truncate">
                     ¿En qué podemos ayudarte?
                   </p>
                 </div>
@@ -322,7 +322,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
             </div>
 
             {/* Quick Direct Actions Footer Bar */}
-            <div className="shrink-0 bg-[#121c21] border-t border-white/10 px-3 py-2 flex items-center justify-between gap-2 text-[11px]">
+            <div className="shrink-0 bg-[#121c21] border-t border-white/10 px-3 py-2 flex items-center justify-between gap-2 text-[12px]">
               <a
                 href="https://wa.me/5491140705211?text=Hola%20Servicios%20Integrados,%20quisiera%20consultar%20por%20servicios%20técnicos."
                 target="_blank"
@@ -371,7 +371,7 @@ export function AIChatModal({ isOpen, onClose, onNavigateToContact }: AIChatModa
                   <Send size={16} />
                 </button>
               </form>
-              <p className="mt-1.5 text-center text-[10px] text-white/40">
+              <p className="mt-1.5 text-center text-[11px] text-white/40">
                 Servicios Integrados · Respuestas inmediatas y asistencia técnica
               </p>
             </div>

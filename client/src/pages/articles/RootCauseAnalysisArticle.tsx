@@ -40,7 +40,7 @@ export default function RootCauseAnalysisArticle() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/analisis-causa-raiz-mantenimiento");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/analisis-causa-raiz-mantenimiento/");
     }
 
     let ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -61,7 +61,7 @@ export default function RootCauseAnalysisArticle() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/analisis-causa-raiz-mantenimiento");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/analisis-causa-raiz-mantenimiento/");
     }
 
     return () => {
@@ -87,7 +87,7 @@ export default function RootCauseAnalysisArticle() {
                 <ArrowLeft size={13} /> Inicio
               </Link>
               <span>/</span>
-              <Link href="/blog" className="hover:underline">
+              <Link href="/blog/" className="hover:underline">
                 Blog Técnico
               </Link>
               <span>/</span>
@@ -196,22 +196,22 @@ export default function RootCauseAnalysisArticle() {
                 </h3>
                 <p className="mt-3 text-sm text-[#fff7ee]/85">
                   En <strong>Servicios Integrados</strong> combinamos la consultoría de{" "}
-                  <Link href="/ingenieria-de-mantenimiento" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/ingenieria-de-mantenimiento/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Ingeniería de Mantenimiento
                   </Link>{" "}
                   con la fabricación de mejoras mecánicas en nuestro taller de{" "}
-                  <Link href="/torneria-mecanizado" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/torneria-mecanizado/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Tornería y Mecanizado
                   </Link>{" "}
                   y programas de{" "}
-                  <Link href="/confiabilidad-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/confiabilidad-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Confiabilidad Industrial
                   </Link>.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    href="/ingenieria-de-mantenimiento"
+                    href="/ingenieria-de-mantenimiento/"
                     className="safety-button inline-flex items-center gap-2 text-xs"
                   >
                     Ver Ingeniería de Mantenimiento <ArrowRight size={14} />

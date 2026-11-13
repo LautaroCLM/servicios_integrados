@@ -44,7 +44,7 @@ export default function IndustrialReliability() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/confiabilidad-industrial");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/confiabilidad-industrial/");
     }
 
     // OG Title
@@ -68,7 +68,7 @@ export default function IndustrialReliability() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/confiabilidad-industrial");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/confiabilidad-industrial/");
     }
 
     return () => {
@@ -293,18 +293,18 @@ export default function IndustrialReliability() {
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-[#fff7ee]/80">
                   La confiabilidad se nutre de la precisión en la ejecución del{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>{" "}
                   y de los métodos analíticos de la{" "}
-                  <Link href="/ingenieria-de-mantenimiento" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/ingenieria-de-mantenimiento/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Ingeniería de Mantenimiento
                   </Link>.
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="/mantenimiento-industrial"
+                    href="/mantenimiento-industrial/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors"
                   >
                     <span>Mantenimiento Industrial</span>
@@ -312,7 +312,7 @@ export default function IndustrialReliability() {
                   </Link>
 
                   <Link
-                    href="/ingenieria-de-mantenimiento"
+                    href="/ingenieria-de-mantenimiento/"
                     className="inline-flex items-center justify-between rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-xs font-bold uppercase tracking-wider text-white hover:border-[#a78bfa] transition-colors"
                   >
                     <span>Ingeniería de Mantenimiento</span>
@@ -352,7 +352,7 @@ export default function IndustrialReliability() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-6 py-4 font-display text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-[#10181d] transition-all"
               >
-                <Phone size={16} /> WhatsApp: 11-40705211
+                <Phone size={16} /> WhatsApp: 11 4070-5211
               </a>
             </div>
           </div>

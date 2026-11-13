@@ -2,6 +2,10 @@
   publish = "dist/public"
   command = "npm run build"
 
+[build.environment]
+  # Vite 7 y el prerender necesitan Node 20.19 o superior.
+  NODE_VERSION = "22"
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
@@ -33,15 +37,32 @@
   status = 200
   force = true
 
-# Redirección canónica 301
+# Redirección canónica 301 directa a /privacidad/
 [[redirects]]
   from = "/politica-de-privacidad"
-  to = "/privacidad"
+  to = "/privacidad/"
   status = 301
   force = true
 
-# SPA fallback para rutas de la aplicación
 [[redirects]]
-  from = "/*"
+  from = "/politica-de-privacidad/*"
+  to = "/privacidad/"
+  status = 301
+  force = true
+
+# Panel admin SPA
+[[redirects]]
+  from = "/panel-novedades-gestion-si"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/panel-novedades-gestion-si/*"
+  to = "/index.html"
+  status = 200
+
+# 404 personalizado para rutas inexistentes
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

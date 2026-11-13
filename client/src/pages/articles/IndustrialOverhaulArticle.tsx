@@ -39,7 +39,7 @@ export default function IndustrialOverhaulArticle() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/overhaul-industrial");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/overhaul-industrial/");
     }
 
     let ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -60,7 +60,7 @@ export default function IndustrialOverhaulArticle() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/overhaul-industrial");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/overhaul-industrial/");
     }
 
     return () => {
@@ -86,7 +86,7 @@ export default function IndustrialOverhaulArticle() {
                 <ArrowLeft size={13} /> Inicio
               </Link>
               <span>/</span>
-              <Link href="/blog" className="hover:underline">
+              <Link href="/blog/" className="hover:underline">
                 Blog Técnico
               </Link>
               <span>/</span>
@@ -169,22 +169,22 @@ export default function IndustrialOverhaulArticle() {
                 </h3>
                 <p className="mt-3 text-sm text-[#fff7ee]/85">
                   Realizamos overhauls en plantas industriales combinando cuadrillas de{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>
                   , taller de{" "}
-                  <Link href="/torneria-mecanizado" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/torneria-mecanizado/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Tornería 24 hs
                   </Link>{" "}
                   y especialización en{" "}
-                  <Link href="/mantenimiento-hornos-industriales" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-hornos-industriales/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Hornos Industriales de Obleas
                   </Link>.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    href="/mantenimiento-industrial"
+                    href="/mantenimiento-industrial/"
                     className="safety-button inline-flex items-center gap-2 text-xs"
                   >
                     Ver Servicios de Overhaul <ArrowRight size={14} />

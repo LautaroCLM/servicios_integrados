@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /panel-novedades-gestion-si
+Disallow: /panel-novedades-gestion-si/
 
 Sitemap: https://serviciosintegradosweb.com/sitemap.xml

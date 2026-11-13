@@ -280,7 +280,7 @@ function vitePluginApi(): Plugin {
                 JSON.stringify({
                   success: false,
                   message:
-                    "Ocurrió un inconveniente al procesar el envío del correo. Por favor intente nuevamente o comuníquese por WhatsApp al 11-40705211.",
+                    "Ocurrió un inconveniente al procesar el envío del correo. Por favor intente nuevamente o comuníquese por WhatsApp al 11 4070-5211.",
                 })
               );
               return;
@@ -394,11 +394,15 @@ function vitePluginApi(): Plugin {
   };
 }
 
+// Herramientas de Manus/depuración: solo en `vite dev`, nunca en el build de producción
+// (el runtime de Manus agregaba ~360 KB de script en línea a cada página).
+const devOnly = (plugin: Plugin): Plugin => ({ ...plugin, apply: "serve" });
+
 const plugins = [
   react(),
   tailwindcss(),
-  jsxLocPlugin(),
-  vitePluginManusRuntime(),
+  devOnly(jsxLocPlugin() as Plugin),
+  devOnly(vitePluginManusRuntime()),
   vitePluginManusDebugCollector(),
   vitePluginStorageProxy(),
   vitePluginApi(),

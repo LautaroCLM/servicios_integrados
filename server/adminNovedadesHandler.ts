@@ -6,24 +6,43 @@ const SUPABASE_URL =
   process.env.VITE_SUPABASE_URL ||
   "https://icnaufhmralkaukefpop.supabase.co";
 
-// En producción debe ser SUPABASE_SERVICE_ROLE_KEY. En desarrollo si no está definida aún, usa fallback.
-const SUPABASE_SERVICE_ROLE_KEY =
-  process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  "sb_publishable_n7glU5wNpTfkqBLCTuapNQ_9yzi0Vn4";
+// Requiere SUPABASE_SERVICE_ROLE_KEY y ADMIN_PASSWORD. Sin ellas, el endpoint queda deshabilitado
+// (no hay contraseñas ni claves por defecto).
+const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "";
+const MIN_ADMIN_PASSWORD_LENGTH = 10;
 
-const supabaseAdmin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
+const isConfigured =
+  Boolean(SUPABASE_SERVICE_ROLE_KEY) && ADMIN_PASSWORD.length >= MIN_ADMIN_PASSWORD_LENGTH;
+
+const supabaseAdmin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY || "not-configured", {
   auth: {
     persistSession: false,
     autoRefreshToken: false,
   },
 });
 
-// Contraseña administrativa en variable de entorno
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "servicios2026";
 const SESSION_SECRET =
   process.env.ADMIN_SESSION_SECRET ||
   crypto.createHash("sha256").update(ADMIN_PASSWORD + "_si_session_salt").digest("hex");
+
+// Límite de intentos de login por IP (por instancia de función)
+const loginAttempts = new Map<string, number[]>();
+const LOGIN_WINDOW_MS = 15 * 60 * 1000;
+const MAX_LOGIN_ATTEMPTS = 5;
+
+function isLoginRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const recent = (loginAttempts.get(ip) || []).filter((ts) => now - ts < LOGIN_WINDOW_MS);
+  loginAttempts.set(ip, recent);
+  return recent.length >= MAX_LOGIN_ATTEMPTS;
+}
+
+function registerFailedLogin(ip: string): void {
+  const recent = loginAttempts.get(ip) || [];
+  recent.push(Date.now());
+  loginAttempts.set(ip, recent);
+}
 
 const SESSION_DURATION_MS = 8 * 60 * 60 * 1000; // 8 horas
 
@@ -112,10 +131,28 @@ function extractStoragePath(imageUrl: string): string | null {
 export async function handleAdminNovedadesRequest(
   action: string,
   body: any,
-  authHeader: string | null | undefined
+  authHeader: string | null | undefined,
+  clientIp: string = "unknown"
 ): Promise<{ status: number; data: any }> {
+  if (!isConfigured) {
+    console.error(
+      "❌ admin-novedades deshabilitado: faltan SUPABASE_SERVICE_ROLE_KEY o ADMIN_PASSWORD (mín. 10 caracteres)."
+    );
+    return {
+      status: 503,
+      data: { success: false, message: "Servicio administrativo no configurado." },
+    };
+  }
+
   // 1. Endpoint público: Login
   if (action === "login") {
+    if (isLoginRateLimited(clientIp)) {
+      return {
+        status: 429,
+        data: { success: false, message: "Demasiados intentos. Espere 15 minutos e intente nuevamente." },
+      };
+    }
+
     const password = String(body?.password || "");
     const adminPass = ADMIN_PASSWORD;
 
@@ -129,6 +166,7 @@ export async function handleAdminNovedadesRequest(
     }
 
     if (!isMatch) {
+      registerFailedLogin(clientIp);
       return {
         status: 401,
         data: { success: false, message: "Contraseña incorrecta." },

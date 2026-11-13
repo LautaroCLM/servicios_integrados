@@ -18,29 +18,47 @@ import IndustrialOverhaulArticle from "../client/src/pages/articles/IndustrialOv
 import RootCauseAnalysisArticle from "../client/src/pages/articles/RootCauseAnalysisArticle.js";
 import AutonomousMaintenanceArticle from "../client/src/pages/articles/AutonomousMaintenanceArticle.js";
 import PrivacyPolicy from "../client/src/pages/PrivacyPolicy.js";
+import { AppShell } from "../client/src/App.js";
 
 export const routesMap: Record<string, React.ComponentType> = {
   "/": Home,
   "/mantenimiento-industrial": IndustrialMaintenance,
+  "/mantenimiento-industrial/": IndustrialMaintenance,
   "/ingenieria-de-mantenimiento": MaintenanceEngineering,
+  "/ingenieria-de-mantenimiento/": MaintenanceEngineering,
   "/confiabilidad-industrial": IndustrialReliability,
+  "/confiabilidad-industrial/": IndustrialReliability,
   "/torneria-mecanizado": MachiningTurnery,
+  "/torneria-mecanizado/": MachiningTurnery,
   "/fabricacion-acero-inoxidable": StainlessSteelManufacturing,
+  "/fabricacion-acero-inoxidable/": StainlessSteelManufacturing,
   "/refrigeracion-industrial": IndustrialRefrigeration,
+  "/refrigeracion-industrial/": IndustrialRefrigeration,
   "/mantenimiento-hornos-industriales": IndustrialOvensMaintenance,
+  "/mantenimiento-hornos-industriales/": IndustrialOvensMaintenance,
   "/blog": BlogIndex,
+  "/blog/": BlogIndex,
   "/blog/mantenimiento-preventivo-industrial": PreventiveMaintenanceArticle,
+  "/blog/mantenimiento-preventivo-industrial/": PreventiveMaintenanceArticle,
   "/blog/mantenimiento-predictivo-industrial": PredictiveMaintenanceArticle,
+  "/blog/mantenimiento-predictivo-industrial/": PredictiveMaintenanceArticle,
   "/blog/mantenimiento-correctivo-vs-preventivo": CorrectiveVsPreventiveArticle,
+  "/blog/mantenimiento-correctivo-vs-preventivo/": CorrectiveVsPreventiveArticle,
   "/blog/paradas-de-planta-industriales": PlantShutdownsArticle,
+  "/blog/paradas-de-planta-industriales/": PlantShutdownsArticle,
   "/blog/overhaul-industrial": IndustrialOverhaulArticle,
+  "/blog/overhaul-industrial/": IndustrialOverhaulArticle,
   "/blog/analisis-causa-raiz-mantenimiento": RootCauseAnalysisArticle,
+  "/blog/analisis-causa-raiz-mantenimiento/": RootCauseAnalysisArticle,
   "/blog/confiabilidad-industrial-mantenimiento-autonomo": AutonomousMaintenanceArticle,
+  "/blog/confiabilidad-industrial-mantenimiento-autonomo/": AutonomousMaintenanceArticle,
   "/privacidad": PrivacyPolicy,
+  "/privacidad/": PrivacyPolicy,
 };
 
 export function renderRouteHtml(path: string): string {
-  const Component = routesMap[path];
+  const normalizedPath = path === "/" ? "/" : path.replace(/\/+$/, "");
+  const Component = routesMap[path] || routesMap[normalizedPath] || routesMap[normalizedPath + "/"];
   if (!Component) return "";
 
   // Set up SSR location context
@@ -57,11 +75,16 @@ export function renderRouteHtml(path: string): string {
     (globalThis as any).location.href = "https://serviciosintegradosweb.com" + path;
   }
 
+  // Mismo árbol que el cliente (AppShell + Suspense por ruta) para que hydrateRoot coincida.
   return renderToString(
     React.createElement(
-      Router,
-      { ssrPath: path },
-      React.createElement(Component)
+      AppShell,
+      null,
+      React.createElement(
+        Router,
+        { ssrPath: path },
+        React.createElement(React.Suspense, { fallback: null }, React.createElement(Component))
+      )
     )
   );
 }

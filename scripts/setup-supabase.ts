@@ -16,10 +16,15 @@ try {
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL || "https://icnaufhmralkaukefpop.supabase.co";
 const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "123";
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "";
 
 if (!SERVICE_KEY) {
   console.error("❌ No se encontró SUPABASE_SERVICE_ROLE_KEY en .env");
+  process.exit(1);
+}
+
+if (ADMIN_PASSWORD.length < 10) {
+  console.error("❌ ADMIN_PASSWORD no está definida en .env o tiene menos de 10 caracteres.");
   process.exit(1);
 }
 

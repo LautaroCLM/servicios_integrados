@@ -38,7 +38,7 @@ export default function PreventiveMaintenanceArticle() {
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     const prevCanonical = canonicalLink ? canonicalLink.getAttribute("href") : "";
     if (canonicalLink) {
-      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/mantenimiento-preventivo-industrial");
+      canonicalLink.setAttribute("href", "https://serviciosintegradosweb.com/blog/mantenimiento-preventivo-industrial/");
     }
 
     let ogTitleMeta = document.querySelector('meta[property="og:title"]');
@@ -59,7 +59,7 @@ export default function PreventiveMaintenanceArticle() {
     let ogUrlMeta = document.querySelector('meta[property="og:url"]');
     const prevOgUrl = ogUrlMeta ? ogUrlMeta.getAttribute("content") : "";
     if (ogUrlMeta) {
-      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/mantenimiento-preventivo-industrial");
+      ogUrlMeta.setAttribute("content", "https://serviciosintegradosweb.com/blog/mantenimiento-preventivo-industrial/");
     }
 
     return () => {
@@ -85,7 +85,7 @@ export default function PreventiveMaintenanceArticle() {
                 <ArrowLeft size={13} /> Inicio
               </Link>
               <span>/</span>
-              <Link href="/blog" className="hover:underline">
+              <Link href="/blog/" className="hover:underline">
                 Blog Técnico
               </Link>
               <span>/</span>
@@ -201,22 +201,22 @@ export default function PreventiveMaintenanceArticle() {
                 </h3>
                 <p className="mt-3 text-sm text-[#fff7ee]/85">
                   En <strong>Servicios Integrados</strong> contamos con más de 30 años de experiencia ejecutando programas de{" "}
-                  <Link href="/mantenimiento-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/mantenimiento-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Mantenimiento Industrial
                   </Link>{" "}
                   preventivo, predictivo y paradas de planta, respaldados por nuestra área de{" "}
-                  <Link href="/ingenieria-de-mantenimiento" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/ingenieria-de-mantenimiento/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Ingeniería de Mantenimiento
                   </Link>{" "}
                   y programas de{" "}
-                  <Link href="/confiabilidad-industrial" className="text-[#a78bfa] underline hover:text-white font-semibold">
+                  <Link href="/confiabilidad-industrial/" className="text-[#a78bfa] underline hover:text-white font-semibold">
                     Confiabilidad Industrial
                   </Link>.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    href="/mantenimiento-industrial"
+                    href="/mantenimiento-industrial/"
                     className="safety-button inline-flex items-center gap-2 text-xs"
                   >
                     Ver Servicio de Mantenimiento Industrial <ArrowRight size={14} />

@@ -17,7 +17,7 @@ export function Brand({ inverse = false }: { inverse?: boolean }) {
     <a href="/#inicio" aria-label="Servicios Integrados — Inicio" className="group flex items-center gap-3">
       <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-white/10 p-1 backdrop-blur-sm transition-transform duration-300 group-hover:scale-105">
         <img
-          src="/images/logoapp.png"
+          src="/img/logoapp2.webp"
           alt="Servicios Integrados — Mantenimiento, Ingeniería y Confiabilidad Industrial"
           loading="eager"
           decoding="async"
@@ -28,7 +28,7 @@ export function Brand({ inverse = false }: { inverse?: boolean }) {
         <div className="font-display text-[1.25rem] font-bold leading-none tracking-[-0.05em] uppercase">
           Servicios <span className="text-[#6d28d9]">Integrados</span>
         </div>
-        <div className="mt-1 text-[0.48rem] font-bold uppercase tracking-[0.18em] opacity-80">
+        <div className="mt-1 hidden text-[0.6875rem] font-bold uppercase tracking-[0.14em] opacity-80 sm:block">
           Mantenimiento · Ingeniería · Confiabilidad
         </div>
       </div>
@@ -137,7 +137,7 @@ export function Header() {
               className="group flex items-center justify-between border-b border-[#fff7ee]/30 py-4 font-display text-3xl font-semibold tracking-[-.07em]"
             >
               <span>
-                <span className="mr-3 align-top font-display text-[.65rem] font-bold tracking-normal opacity-70">
+                <span className="mr-3 align-top font-display text-[.75rem] font-bold tracking-normal opacity-70">
                   0{index + 1}
                 </span>
                 {name}
